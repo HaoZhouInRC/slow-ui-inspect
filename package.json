@@ -1,0 +1,21 @@
+{
+  "description": "Apache ECharts Demo",
+  "keywords": [
+    "echarts",
+    "apache"
+  ],
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -c-1 -p 8080"
+  },
+  "dependencies": {
+    "csv": "^6.3.8",
+    "csv-parse": "^5.5.5"
+  },
+  "devDependencies": {
+    "@types/echarts": "^4.9.22",
+    "@types/jquery": "^3.5.29",
+    "http-server": "^14.1.1",
+    "prettier": "^3.2.5"
+  }
+}

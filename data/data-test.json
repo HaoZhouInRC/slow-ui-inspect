@@ -1,0 +1,835 @@
+{
+  "name": "root",
+  "path": "root",
+  "value": 15970,
+  "children": [
+    {
+      "name": "PresenceAndShareStatus-presence-button-popover",
+      "path": "root.PresenceAndShareStatus-presence-button-popover",
+      "value": 197,
+      "children": [
+        {
+          "name": "PresenceMenu",
+          "path": "root.PresenceAndShareStatus-presence-button-popover.PresenceMenu",
+          "value": 197,
+          "children": [
+            {
+              "name": "presence-submenu-dnd",
+              "path": "root.PresenceAndShareStatus-presence-button-popover.PresenceMenu.presence-submenu-dnd",
+              "value": 197,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "VersatileResponsiveLayout-MessageRailCompactLayout",
+      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout",
+      "value": 9283,
+      "children": [
+        {
+          "name": "MESSAGE_CONTENT_PANEL_Panel",
+          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel",
+          "value": 2777,
+          "children": [
+            {
+              "name": "messagePanel",
+              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel",
+              "value": 2777,
+              "children": [
+                {
+                  "name": "chat-stream-wrapper",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper",
+                  "value": 1996,
+                  "children": [
+                    {
+                      "name": "chat-stream",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream",
+                      "value": 1996,
+                      "children": [
+                        {
+                          "name": "virtualized-list",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list",
+                          "value": 1996,
+                          "children": [
+                            {
+                              "name": "styled-conversation-card",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card",
+                              "value": 1996,
+                              "children": [
+                                {
+                                  "name": "avatar",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.avatar",
+                                  "value": 368,
+                                  "children": []
+                                },
+                                {
+                                  "name": "cardHeaderRightSection",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.cardHeaderRightSection",
+                                  "value": 1174,
+                                  "children": [
+                                    {
+                                      "name": "action-bar",
+                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.cardHeaderRightSection.action-bar",
+                                      "value": 1174,
+                                      "children": [
+                                        {
+                                          "name": "message-action-edit",
+                                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.cardHeaderRightSection.action-bar.message-action-edit",
+                                          "value": 636,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "message-action-more",
+                                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.cardHeaderRightSection.action-bar.message-action-more",
+                                          "value": 193,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "message-action-quote",
+                                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.cardHeaderRightSection.action-bar.message-action-quote",
+                                          "value": 345,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "imageCard",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.imageCard",
+                                  "value": 454,
+                                  "children": [
+                                    {
+                                      "name": "image",
+                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.imageCard.image",
+                                      "value": 454,
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "resizable",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable",
+                  "value": 781,
+                  "children": [
+                    {
+                      "name": "message-input",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input",
+                      "value": 781,
+                      "children": [
+                        {
+                          "name": "editor-container-wrapper",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input.editor-container-wrapper",
+                          "value": 107,
+                          "children": [
+                            {
+                              "name": "conversation-toolbar-send-button",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input.editor-container-wrapper.conversation-toolbar-send-button",
+                              "value": 107,
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "message-toolbar",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input.message-toolbar",
+                          "value": 674,
+                          "children": [
+                            {
+                              "name": "conversation-chatbar-giphy-button",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input.message-toolbar.conversation-chatbar-giphy-button",
+                              "value": 191,
+                              "children": []
+                            },
+                            {
+                              "name": "conversation-toolbar-send-button",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input.message-toolbar.conversation-toolbar-send-button",
+                              "value": 483,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MESSAGE_LEFT_RAIL_Panel",
+          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel",
+          "value": 6506,
+          "children": [
+            {
+              "name": "leftRail",
+              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail",
+              "value": 6506,
+              "children": [
+                {
+                  "name": "TabListBar__item--direct_messages",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.TabListBar__item--direct_messages",
+                  "value": 169,
+                  "children": []
+                },
+                {
+                  "name": "TabListBar__item--teams",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.TabListBar__item--teams",
+                  "value": 140,
+                  "children": []
+                },
+                {
+                  "name": "all",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.all",
+                  "value": 466,
+                  "children": [
+                    {
+                      "name": "all-list",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.all.all-list",
+                      "value": 466,
+                      "children": [
+                        {
+                          "name": "virtualized-list",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.all.all-list.virtualized-list",
+                          "value": 466,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.all.all-list.virtualized-list.conversation-list-item",
+                              "value": 466,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.all.all-list.virtualized-list.conversation-list-item.no-search-highlight-text",
+                                  "value": 466,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "conversation-list-item",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.conversation-list-item",
+                  "value": 1131,
+                  "children": [
+                    {
+                      "name": "no-search-highlight-text",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.conversation-list-item.no-search-highlight-text",
+                      "value": 1131,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "direct_messages",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages",
+                  "value": 1081,
+                  "children": [
+                    {
+                      "name": "message",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message",
+                      "value": 1081,
+                      "children": [
+                        {
+                          "name": "directGroups",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups",
+                          "value": 1081,
+                          "children": [
+                            {
+                              "name": "conversation-collapse",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups.conversation-collapse",
+                              "value": 792,
+                              "children": [
+                                {
+                                  "name": "conversation-list-item",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups.conversation-collapse.conversation-list-item",
+                                  "value": 792,
+                                  "children": [
+                                    {
+                                      "name": "no-search-highlight-text",
+                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                      "value": 792,
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "message",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups.message",
+                              "value": 289,
+                              "children": [
+                                {
+                                  "name": "directGroups-header",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups.message.directGroups-header",
+                                  "value": 289,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "favorites",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites",
+                  "value": 1281,
+                  "children": [
+                    {
+                      "name": "message",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites.message",
+                      "value": 1281,
+                      "children": [
+                        {
+                          "name": "favoriteGroups",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites.message.favoriteGroups",
+                          "value": 1281,
+                          "children": [
+                            {
+                              "name": "conversation-collapse",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites.message.favoriteGroups.conversation-collapse",
+                              "value": 1281,
+                              "children": [
+                                {
+                                  "name": "conversation-list-item",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites.message.favoriteGroups.conversation-collapse.conversation-list-item",
+                                  "value": 1281,
+                                  "children": [
+                                    {
+                                      "name": "no-search-highlight-text",
+                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites.message.favoriteGroups.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                      "value": 1281,
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "message-conversationList-filter",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.message-conversationList-filter",
+                  "value": 781,
+                  "children": [
+                    {
+                      "name": "ALL-tab-menu-item",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.message-conversationList-filter.ALL-tab-menu-item",
+                      "value": 363,
+                      "children": []
+                    },
+                    {
+                      "name": "UNREAD-tab-menu-item",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.message-conversationList-filter.UNREAD-tab-menu-item",
+                      "value": 418,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "teams",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams",
+                  "value": 1457,
+                  "children": [
+                    {
+                      "name": "message",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message",
+                      "value": 1457,
+                      "children": [
+                        {
+                          "name": "teamGroups",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups",
+                          "value": 1457,
+                          "children": [
+                            {
+                              "name": "conversation-collapse",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups.conversation-collapse",
+                              "value": 1258,
+                              "children": [
+                                {
+                                  "name": "conversation-list-item",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups.conversation-collapse.conversation-list-item",
+                                  "value": 1258,
+                                  "children": [
+                                    {
+                                      "name": "no-search-highlight-text",
+                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                      "value": 1258,
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "message",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups.message",
+                              "value": 199,
+                              "children": [
+                                {
+                                  "name": "teamGroups-header",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups.message.teamGroups-header",
+                                  "value": 199,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Viewer",
+      "path": "root.Viewer",
+      "value": 139,
+      "children": [
+        {
+          "name": "ViewerHeader",
+          "path": "root.Viewer.ViewerHeader",
+          "value": 139,
+          "children": [
+            {
+              "name": "viewerActions",
+              "path": "root.Viewer.ViewerHeader.viewerActions",
+              "value": 139,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "groupSearch",
+      "path": "root.groupSearch",
+      "value": 194,
+      "children": [
+        {
+          "name": "virtualized-list",
+          "path": "root.groupSearch.virtualized-list",
+          "value": 194,
+          "children": [
+            {
+              "name": "groupSearchItem",
+              "path": "root.groupSearch.virtualized-list.groupSearchItem",
+              "value": 194,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leftPanel",
+      "path": "root.leftPanel",
+      "value": 1241,
+      "children": [
+        {
+          "name": "meet",
+          "path": "root.leftPanel.meet",
+          "value": 187,
+          "children": []
+        },
+        {
+          "name": "messages",
+          "path": "root.leftPanel.messages",
+          "value": 331,
+          "children": []
+        },
+        {
+          "name": "phone",
+          "path": "root.leftPanel.phone",
+          "value": 432,
+          "children": []
+        },
+        {
+          "name": "text",
+          "path": "root.leftPanel.text",
+          "value": 291,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "phone__tab",
+      "path": "root.phone__tab",
+      "value": 1923,
+      "children": [
+        {
+          "name": "phone__leftPanel",
+          "path": "root.phone__tab.phone__leftPanel",
+          "value": 1791,
+          "children": [
+            {
+              "name": "phone__leftPanel",
+              "path": "root.phone__tab.phone__leftPanel.phone__leftPanel",
+              "value": 1791,
+              "children": [
+                {
+                  "name": "TabListBar__item--hud",
+                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.TabListBar__item--hud",
+                  "value": 150,
+                  "children": []
+                },
+                {
+                  "name": "TabListBar__item--recent",
+                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.TabListBar__item--recent",
+                  "value": 640,
+                  "children": []
+                },
+                {
+                  "name": "TabListBar__item--voicemail",
+                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.TabListBar__item--voicemail",
+                  "value": 435,
+                  "children": []
+                },
+                {
+                  "name": "recent-all",
+                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all",
+                  "value": 383,
+                  "children": [
+                    {
+                      "name": "recent-all-list",
+                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list",
+                      "value": 383,
+                      "children": [
+                        {
+                          "name": "virtualized-list",
+                          "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list",
+                          "value": 383,
+                          "children": [
+                            {
+                              "name": "call-history-item",
+                              "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list.call-history-item",
+                              "value": 383,
+                              "children": [
+                                {
+                                  "name": "phone__item--primaryInfo",
+                                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list.call-history-item.phone__item--primaryInfo",
+                                  "value": 383,
+                                  "children": [
+                                    {
+                                      "name": "callLogItem__secondaryInfo",
+                                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list.call-history-item.phone__item--primaryInfo.callLogItem__secondaryInfo",
+                                      "value": 211,
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "phone__contact--primaryInfo",
+                                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list.call-history-item.phone__item--primaryInfo.phone__contact--primaryInfo",
+                                      "value": 172,
+                                      "children": [
+                                        {
+                                          "name": "no-search-highlight-text",
+                                          "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list.call-history-item.phone__item--primaryInfo.phone__contact--primaryInfo.no-search-highlight-text",
+                                          "value": 172,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "voicemail-personal-all",
+                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.voicemail-personal-all",
+                  "value": 183,
+                  "children": [
+                    {
+                      "name": "voicemail-personal-all-list",
+                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.voicemail-personal-all.voicemail-personal-all-list",
+                      "value": 183,
+                      "children": [
+                        {
+                          "name": "virtualized-list",
+                          "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.voicemail-personal-all.voicemail-personal-all-list.virtualized-list",
+                          "value": 183,
+                          "children": [
+                            {
+                              "name": "voicemail-item",
+                              "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.voicemail-personal-all.voicemail-personal-all-list.virtualized-list.voicemail-item",
+                              "value": 183,
+                              "children": [
+                                {
+                                  "name": "phone__item--primaryInfo",
+                                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.voicemail-personal-all.voicemail-personal-all-list.virtualized-list.voicemail-item.phone__item--primaryInfo",
+                                  "value": 183,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "phone__rightPanel",
+          "path": "root.phone__tab.phone__rightPanel",
+          "value": 132,
+          "children": [
+            {
+              "name": "phone__rightPanel",
+              "path": "root.phone__tab.phone__rightPanel.phone__rightPanel",
+              "value": 132,
+              "children": [
+                {
+                  "name": "phone__genericDialerPanel",
+                  "path": "root.phone__tab.phone__rightPanel.phone__rightPanel.phone__genericDialerPanel",
+                  "value": 132,
+                  "children": [
+                    {
+                      "name": "telephony-dialer-header",
+                      "path": "root.phone__tab.phone__rightPanel.phone__rightPanel.phone__genericDialerPanel.telephony-dialer-header",
+                      "value": 132,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sms__tab",
+      "path": "root.sms__tab",
+      "value": 936,
+      "children": [
+        {
+          "name": "SMSTab__leftPanel",
+          "path": "root.sms__tab.SMSTab__leftPanel",
+          "value": 660,
+          "children": [
+            {
+              "name": "SMSTab__leftPanel",
+              "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel",
+              "value": 660,
+              "children": [
+                {
+                  "name": "sms-all",
+                  "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all",
+                  "value": 660,
+                  "children": [
+                    {
+                      "name": "sms-all-list",
+                      "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list",
+                      "value": 660,
+                      "children": [
+                        {
+                          "name": "virtualized-list",
+                          "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list.virtualized-list",
+                          "value": 660,
+                          "children": [
+                            {
+                              "name": "sms-item",
+                              "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item",
+                              "value": 660,
+                              "children": [
+                                {
+                                  "name": "phone__item--primaryInfo",
+                                  "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item.phone__item--primaryInfo",
+                                  "value": 660,
+                                  "children": [
+                                    {
+                                      "name": "phone__contact--primaryInfo",
+                                      "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item.phone__item--primaryInfo.phone__contact--primaryInfo",
+                                      "value": 660,
+                                      "children": [
+                                        {
+                                          "name": "no-search-highlight-text",
+                                          "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item.phone__item--primaryInfo.phone__contact--primaryInfo.no-search-highlight-text",
+                                          "value": 660,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SMSTab__tab",
+          "path": "root.sms__tab.SMSTab__tab",
+          "value": 276,
+          "children": [
+            {
+              "name": "SMSTab__tab",
+              "path": "root.sms__tab.SMSTab__tab.SMSTab__tab",
+              "value": 276,
+              "children": [
+                {
+                  "name": "SMSDetail",
+                  "path": "root.sms__tab.SMSTab__tab.SMSTab__tab.SMSDetail",
+                  "value": 276,
+                  "children": [
+                    {
+                      "name": "sms-input",
+                      "path": "root.sms__tab.SMSTab__tab.SMSTab__tab.SMSDetail.sms-input",
+                      "value": 276,
+                      "children": [
+                        {
+                          "name": "editor-container-wrapper",
+                          "path": "root.sms__tab.SMSTab__tab.SMSTab__tab.SMSDetail.sms-input.editor-container-wrapper",
+                          "value": 276,
+                          "children": [
+                            {
+                              "name": "post-button",
+                              "path": "root.sms__tab.SMSTab__tab.SMSTab__tab.SMSDetail.sms-input.editor-container-wrapper.post-button",
+                              "value": 276,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "telephony-dialpad-btn",
+      "path": "root.telephony-dialpad-btn",
+      "value": 723,
+      "children": []
+    },
+    {
+      "name": "telephony-minimized-view",
+      "path": "root.telephony-minimized-view",
+      "value": 189,
+      "children": [
+        {
+          "name": "telephony-end-btn",
+          "path": "root.telephony-minimized-view.telephony-end-btn",
+          "value": 189,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "topBarAvatar",
+      "path": "root.topBarAvatar",
+      "value": 588,
+      "children": []
+    },
+    {
+      "name": "video-incoming-container",
+      "path": "root.video-incoming-container",
+      "value": 177,
+      "children": [
+        {
+          "name": "video-call-answer-btn",
+          "path": "root.video-incoming-container.video-call-answer-btn",
+          "value": 177,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "video__tab",
+      "path": "root.video__tab",
+      "value": 380,
+      "children": [
+        {
+          "name": "video__leftPanel",
+          "path": "root.video__tab.video__leftPanel",
+          "value": 380,
+          "children": [
+            {
+              "name": "video__leftPanel",
+              "path": "root.video__tab.video__leftPanel.video__leftPanel",
+              "value": 380,
+              "children": [
+                {
+                  "name": "calendar-wrapper",
+                  "path": "root.video__tab.video__leftPanel.video__leftPanel.calendar-wrapper",
+                  "value": 380,
+                  "children": [
+                    {
+                      "name": "virtualized-list",
+                      "path": "root.video__tab.video__leftPanel.video__leftPanel.calendar-wrapper.virtualized-list",
+                      "value": 380,
+                      "children": [
+                        {
+                          "name": "calendar-event-item",
+                          "path": "root.video__tab.video__leftPanel.video__leftPanel.calendar-wrapper.virtualized-list.calendar-event-item",
+                          "value": 380,
+                          "children": [
+                            {
+                              "name": "calendar-event-item-join-button",
+                              "path": "root.video__tab.video__leftPanel.video__leftPanel.calendar-wrapper.virtualized-list.calendar-event-item.calendar-event-item-join-button",
+                              "value": 380,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
