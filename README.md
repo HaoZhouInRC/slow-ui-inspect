@@ -4,7 +4,7 @@
 
 ### Download data
 
-Visit [Slow UI Inspect](https://kibana.int.ringcentral.com/s/default/app/dashboards#/view/6cef69f0-f6e4-11ee-be27-ad6f8298320a?_g=(filters%3A!()%2Cquery%3A(language%3Akuery%2Cquery%3A'')%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-2w%2Cto%3Anow)) to download the data.
+Visit [Slow UI Inspect](https://kibana.int.ringcentral.com/s/default/goto/8bbbf363f555a3e4d5279fd1df3a982a) to download the data.
 
 ![img.png](/assets/download-data.gif)
 
