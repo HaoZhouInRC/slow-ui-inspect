@@ -4,19 +4,17 @@
 
 ### Download data
 
-- [Slow UI by click event]()
-- [Slow UI by keydown event]()
-- [Slow UI by mouseover event]()
+Visit [Slow UI Inspect](https://kibana.int.ringcentral.com/s/default/app/dashboards#/view/6cef69f0-f6e4-11ee-be27-ad6f8298320a?_g=(filters%3A!()%2Cquery%3A(language%3Akuery%2Cquery%3A'')%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-2w%2Cto%3Anow)) to download the data.
 
-Visit the above links and click on the "Download as CSV" button in the top right corner to download the data.
-
-![img.png](/assets/download-data.png)
+![img.png](/assets/download-data.gif)
 
 
 ### Visualize the data
 
 1. visit http://slow-ui-virtualization.app.int.rclabenv.com
 2. upload your data
+
+![view-chart](/assets/view-chart.mov)
 
 ## What the chart means
 
