@@ -1,22 +1,9 @@
-/// <reference path="node_modules/@types/echarts/index.d.ts" />
-/// <reference path="node_modules/@types/jquery/index.d.ts" />
-
-const initChart = () => {
-  const dom = document.getElementById('chart-container');
-  const chart = echarts.init(dom, null, {
-    renderer: 'canvas',
-    useDirtyRect: false,
-  });
-
-  chart.showLoading();
-
-  window.addEventListener('resize', chart.resize);
-
-  return chart;
-};
+import SeriesTreemap = echarts.EChartOption.SeriesTreemap;
+import SeriesTree = echarts.EChartOption.SeriesTree;
+import * as Echarts from 'echarts';
 
 const seriesType = {
-  tree: (data) => ({
+  tree: (data: SeriesTree.DataObject[]) => ({
     type: 'tree',
     data: [data],
     top: '1%',
@@ -46,7 +33,7 @@ const seriesType = {
     animationDurationUpdate: 750,
     initialTreeDepth: 10,
   }),
-  treeMap: (data) => {
+  treeMap: (data: { children: SeriesTreemap.DataObject[] }) => {
     function getLevelOption() {
       return [
         {
@@ -83,10 +70,9 @@ const seriesType = {
       ];
     }
 
-    /**
-     * @type {import('echarts').EChartOption.SeriesTreemap}
-     */
-    const options = {
+    console.log(data);
+
+    return {
       name: 'Slow UI Element Count',
       type: 'treemap',
       visibleMin: 300,
@@ -104,58 +90,44 @@ const seriesType = {
       levels: getLevelOption(),
       data: data.children,
     };
-
-    return options;
   },
 };
 
-/**
- *
- * @param {import('echarts').ECharts} chart
- */
-const renderChart = (chart) => {
-  /**
-   * @type {import('echarts').EChartOption}
-   */
-  let option = null;
+export const renderChart = (chart: Echarts.EChartsType, data: any) => {
+  let option: Echarts.EChartOption | null = null;
 
-  $.get('/data/data-test.json', function (data) {
-    chart.hideLoading();
-    const formatUtil = echarts.format;
+  chart.hideLoading();
+  const formatUtil = Echarts.format;
 
-    chart.setOption(
-      (option = {
-        title: {
-          text: 'Slow UI Element path & time',
-          left: 'center',
-          top: 24,
+  chart.setOption(
+    (option = {
+      title: {
+        text: 'Slow UI Element path & time',
+        left: 'center',
+        top: 24,
+      },
+      tooltip: {
+        formatter: function (info: any) {
+          const value = info.value;
+          const treePathInfo = info.treePathInfo;
+          const treePath = [];
+          for (let i = 1; i < treePathInfo.length; i++) {
+            treePath.push(treePathInfo[i].name);
+          }
+          return [
+            '<div class="tooltip-title" style="max-width: 240px; white-space: break-spaces; word-wrap: break-word;">' +
+              formatUtil.encodeHTML(treePath.join('.')) +
+              '</div>',
+            'Avg time: ' + formatUtil.addCommas(value) + ' ms',
+          ].join('');
         },
-        tooltip: {
-          formatter: function (info) {
-            const value = info.value;
-            const treePathInfo = info.treePathInfo;
-            const treePath = [];
-            for (let i = 1; i < treePathInfo.length; i++) {
-              treePath.push(treePathInfo[i].name);
-            }
-            return [
-              '<div class="tooltip-title" style="max-width: 240px; white-space: break-spaces; word-wrap: break-word;">' +
-                formatUtil.encodeHTML(treePath.join('.')) +
-                '</div>',
-              'Avg time: ' + formatUtil.addCommas(value) + ' ms',
-            ].join('');
-          },
-        },
-        // TODO: support change series type
-        series: [seriesType['treeMap'](data)],
-      }),
-    );
-  });
+      },
+      // TODO: support change series type
+      series: [seriesType['treeMap'](data)],
+    }),
+  );
 
   if (option && typeof option === 'object') {
     chart.setOption(option);
   }
 };
-
-const chart = initChart();
-renderChart(chart);
