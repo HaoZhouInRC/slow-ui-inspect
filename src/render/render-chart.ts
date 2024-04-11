@@ -70,11 +70,9 @@ const seriesType = {
       ];
     }
 
-    console.log(data);
-
     return {
       name: 'Slow UI Element Count',
-      type: 'treemap',
+      type: 'sunburst',
       visibleMin: 300,
       label: {
         show: true,
