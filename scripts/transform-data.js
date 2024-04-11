@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const dataFilePath = path.join(__dirname, '../data/data.csv');
+const dataFilePath = path.join(
+  __dirname,
+  '../data/Slow UI  Element - Click event.csv',
+);
 
 const data = fs
   .readFileSync(dataFilePath, 'utf8')
@@ -15,25 +18,21 @@ const map = new Map();
 
 /**
  *
- * @param name
- * @param path
- * @param value
  * @return {{path, children: *[], name, value}}
  */
 const createItem = (data) => {
-  const item = {
+  return {
     ...data,
     children: [],
   };
-
-  return item;
 };
 
 data.forEach((line) => {
-  const [pathStr, valueStr] = line.replace(/\d,\d/, '').split(',');
+  const pathStr = line.slice(0, line.indexOf(','));
+  const valueStr = line.slice(line.indexOf(','));
 
   const path = pathStr.replaceAll('"', '');
-  const value = parseInt(valueStr.replaceAll('"', ''));
+  const value = parseInt(valueStr.replaceAll(',', '').replaceAll('"', ''));
 
   path.split('.').reduce((pre, cur) => {
     const path = (pre ? pre + '.' : '') + cur;

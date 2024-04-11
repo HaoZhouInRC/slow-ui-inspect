@@ -1,161 +1,83 @@
 {
   "name": "root",
   "path": "root",
-  "value": 15970,
+  "value": 81419,
   "children": [
     {
-      "name": "PresenceAndShareStatus-presence-button-popover",
-      "path": "root.PresenceAndShareStatus-presence-button-popover",
-      "value": 197,
+      "name": "NECF-Confirm-dialog",
+      "path": "root.NECF-Confirm-dialog",
+      "value": 1952,
       "children": [
         {
-          "name": "PresenceMenu",
-          "path": "root.PresenceAndShareStatus-presence-button-popover.PresenceMenu",
-          "value": 197,
-          "children": [
-            {
-              "name": "presence-submenu-dnd",
-              "path": "root.PresenceAndShareStatus-presence-button-popover.PresenceMenu.presence-submenu-dnd",
-              "value": 197,
-              "children": []
-            }
-          ]
+          "name": "out-of-country-checkbox",
+          "path": "root.NECF-Confirm-dialog.out-of-country-checkbox",
+          "value": 1952,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "SMSTemplateDialog",
+      "path": "root.SMSTemplateDialog",
+      "value": 1647,
+      "children": [
+        {
+          "name": "DialogContent",
+          "path": "root.SMSTemplateDialog.DialogContent",
+          "value": 1647,
+          "children": []
         }
       ]
     },
     {
       "name": "VersatileResponsiveLayout-MessageRailCompactLayout",
       "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout",
-      "value": 9283,
+      "value": 57941,
       "children": [
         {
           "name": "MESSAGE_CONTENT_PANEL_Panel",
           "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel",
-          "value": 2777,
+          "value": 1732,
           "children": [
             {
               "name": "messagePanel",
               "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel",
-              "value": 2777,
+              "value": 1732,
               "children": [
                 {
                   "name": "chat-stream-wrapper",
                   "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper",
-                  "value": 1996,
+                  "value": 1732,
                   "children": [
                     {
                       "name": "chat-stream",
                       "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream",
-                      "value": 1996,
+                      "value": 1732,
                       "children": [
                         {
                           "name": "virtualized-list",
                           "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list",
-                          "value": 1996,
+                          "value": 1732,
                           "children": [
                             {
                               "name": "styled-conversation-card",
                               "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card",
-                              "value": 1996,
+                              "value": 1732,
                               "children": [
                                 {
-                                  "name": "avatar",
-                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.avatar",
-                                  "value": 368,
-                                  "children": []
-                                },
-                                {
-                                  "name": "cardHeaderRightSection",
-                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.cardHeaderRightSection",
-                                  "value": 1174,
+                                  "name": "linkItemsWrapper",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.linkItemsWrapper",
+                                  "value": 1732,
                                   "children": [
                                     {
-                                      "name": "action-bar",
-                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.cardHeaderRightSection.action-bar",
-                                      "value": 1174,
-                                      "children": [
-                                        {
-                                          "name": "message-action-edit",
-                                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.cardHeaderRightSection.action-bar.message-action-edit",
-                                          "value": 636,
-                                          "children": []
-                                        },
-                                        {
-                                          "name": "message-action-more",
-                                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.cardHeaderRightSection.action-bar.message-action-more",
-                                          "value": 193,
-                                          "children": []
-                                        },
-                                        {
-                                          "name": "message-action-quote",
-                                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.cardHeaderRightSection.action-bar.message-action-quote",
-                                          "value": 345,
-                                          "children": []
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "name": "imageCard",
-                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.imageCard",
-                                  "value": 454,
-                                  "children": [
-                                    {
-                                      "name": "image",
-                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.imageCard.image",
-                                      "value": 454,
+                                      "name": "linkItemTitle",
+                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.chat-stream-wrapper.chat-stream.virtualized-list.styled-conversation-card.linkItemsWrapper.linkItemTitle",
+                                      "value": 1732,
                                       "children": []
                                     }
                                   ]
                                 }
                               ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "resizable",
-                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable",
-                  "value": 781,
-                  "children": [
-                    {
-                      "name": "message-input",
-                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input",
-                      "value": 781,
-                      "children": [
-                        {
-                          "name": "editor-container-wrapper",
-                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input.editor-container-wrapper",
-                          "value": 107,
-                          "children": [
-                            {
-                              "name": "conversation-toolbar-send-button",
-                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input.editor-container-wrapper.conversation-toolbar-send-button",
-                              "value": 107,
-                              "children": []
-                            }
-                          ]
-                        },
-                        {
-                          "name": "message-toolbar",
-                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input.message-toolbar",
-                          "value": 674,
-                          "children": [
-                            {
-                              "name": "conversation-chatbar-giphy-button",
-                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input.message-toolbar.conversation-chatbar-giphy-button",
-                              "value": 191,
-                              "children": []
-                            },
-                            {
-                              "name": "conversation-toolbar-send-button",
-                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_CONTENT_PANEL_Panel.messagePanel.resizable.message-input.message-toolbar.conversation-toolbar-send-button",
-                              "value": 483,
-                              "children": []
                             }
                           ]
                         }
@@ -170,49 +92,37 @@
         {
           "name": "MESSAGE_LEFT_RAIL_Panel",
           "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel",
-          "value": 6506,
+          "value": 56209,
           "children": [
             {
               "name": "leftRail",
               "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail",
-              "value": 6506,
+              "value": 56209,
               "children": [
                 {
-                  "name": "TabListBar__item--direct_messages",
-                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.TabListBar__item--direct_messages",
-                  "value": 169,
-                  "children": []
-                },
-                {
-                  "name": "TabListBar__item--teams",
-                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.TabListBar__item--teams",
-                  "value": 140,
-                  "children": []
-                },
-                {
-                  "name": "all",
-                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.all",
-                  "value": 466,
+                  "name": "folder-ALL - LEADERS GC",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-ALL - LEADERS GC",
+                  "value": 1584,
                   "children": [
                     {
-                      "name": "all-list",
-                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.all.all-list",
-                      "value": 466,
+                      "name": "ALL - LEADERS GC",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-ALL - LEADERS GC.ALL - LEADERS GC",
+                      "value": 1584,
                       "children": [
                         {
-                          "name": "virtualized-list",
-                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.all.all-list.virtualized-list",
-                          "value": 466,
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-ALL - LEADERS GC.ALL - LEADERS GC.conversation-collapse",
+                          "value": 1584,
                           "children": [
                             {
                               "name": "conversation-list-item",
-                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.all.all-list.virtualized-list.conversation-list-item",
-                              "value": 466,
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-ALL - LEADERS GC.ALL - LEADERS GC.conversation-collapse.conversation-list-item",
+                              "value": 1584,
                               "children": [
                                 {
                                   "name": "no-search-highlight-text",
-                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.all.all-list.virtualized-list.conversation-list-item.no-search-highlight-text",
-                                  "value": 466,
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-ALL - LEADERS GC.ALL - LEADERS GC.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1584,
                                   "children": []
                                 }
                               ]
@@ -224,62 +134,56 @@
                   ]
                 },
                 {
-                  "name": "conversation-list-item",
-                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.conversation-list-item",
-                  "value": 1131,
+                  "name": "folder-AWS",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-AWS",
+                  "value": 1584,
                   "children": [
                     {
-                      "name": "no-search-highlight-text",
-                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.conversation-list-item.no-search-highlight-text",
-                      "value": 1131,
-                      "children": []
+                      "name": "AWS",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-AWS.AWS",
+                      "value": 1584,
+                      "children": [
+                        {
+                          "name": "AWS-header",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-AWS.AWS.AWS-header",
+                          "value": 1584,
+                          "children": [
+                            {
+                              "name": "conversation-list-section-header-arrow-up",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-AWS.AWS.AWS-header.conversation-list-section-header-arrow-up",
+                              "value": 1584,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "name": "direct_messages",
-                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages",
-                  "value": 1081,
+                  "name": "folder-Accenture",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Accenture",
+                  "value": 1782,
                   "children": [
                     {
-                      "name": "message",
-                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message",
-                      "value": 1081,
+                      "name": "Accenture",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Accenture.Accenture",
+                      "value": 1782,
                       "children": [
                         {
-                          "name": "directGroups",
-                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups",
-                          "value": 1081,
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Accenture.Accenture.conversation-collapse",
+                          "value": 1782,
                           "children": [
                             {
-                              "name": "conversation-collapse",
-                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups.conversation-collapse",
-                              "value": 792,
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Accenture.Accenture.conversation-collapse.conversation-list-item",
+                              "value": 1782,
                               "children": [
                                 {
-                                  "name": "conversation-list-item",
-                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups.conversation-collapse.conversation-list-item",
-                                  "value": 792,
-                                  "children": [
-                                    {
-                                      "name": "no-search-highlight-text",
-                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups.conversation-collapse.conversation-list-item.no-search-highlight-text",
-                                      "value": 792,
-                                      "children": []
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "name": "message",
-                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups.message",
-                              "value": 289,
-                              "children": [
-                                {
-                                  "name": "directGroups-header",
-                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.direct_messages.message.directGroups.message.directGroups-header",
-                                  "value": 289,
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Accenture.Accenture.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1782,
                                   "children": []
                                 }
                               ]
@@ -291,37 +195,111 @@
                   ]
                 },
                 {
-                  "name": "favorites",
-                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites",
-                  "value": 1281,
+                  "name": "folder-Batch 13",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Batch 13",
+                  "value": 1952,
                   "children": [
                     {
-                      "name": "message",
-                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites.message",
-                      "value": 1281,
+                      "name": "Batch 13",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Batch 13.Batch 13",
+                      "value": 1952,
                       "children": [
                         {
-                          "name": "favoriteGroups",
-                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites.message.favoriteGroups",
-                          "value": 1281,
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Batch 13.Batch 13.conversation-collapse",
+                          "value": 1952,
                           "children": [
                             {
-                              "name": "conversation-collapse",
-                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites.message.favoriteGroups.conversation-collapse",
-                              "value": 1281,
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Batch 13.Batch 13.conversation-collapse.conversation-list-item",
+                              "value": 1952,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-CM Chats",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-CM Chats",
+                  "value": 1907,
+                  "children": [
+                    {
+                      "name": "CM Chats",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-CM Chats.CM Chats",
+                      "value": 1907,
+                      "children": [
+                        {
+                          "name": "CM Chats-header",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-CM Chats.CM Chats.CM Chats-header",
+                          "value": 1907,
+                          "children": [
+                            {
+                              "name": "conversation-list-section-header-arrow-up",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-CM Chats.CM Chats.CM Chats-header.conversation-list-section-header-arrow-up",
+                              "value": 1907,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-CUST Teams",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-CUST Teams",
+                  "value": 1811,
+                  "children": [
+                    {
+                      "name": "CUST Teams",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-CUST Teams.CUST Teams",
+                      "value": 1811,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-CUST Teams.CUST Teams.conversation-collapse",
+                          "value": 1811,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-CUST Teams.CUST Teams.conversation-collapse.conversation-list-item",
+                              "value": 1811,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Call Audit",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Call Audit",
+                  "value": 1936,
+                  "children": [
+                    {
+                      "name": "Call Audit",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Call Audit.Call Audit",
+                      "value": 1936,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Call Audit.Call Audit.conversation-collapse",
+                          "value": 1936,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Call Audit.Call Audit.conversation-collapse.conversation-list-item",
+                              "value": 1936,
                               "children": [
                                 {
-                                  "name": "conversation-list-item",
-                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites.message.favoriteGroups.conversation-collapse.conversation-list-item",
-                                  "value": 1281,
-                                  "children": [
-                                    {
-                                      "name": "no-search-highlight-text",
-                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.favorites.message.favoriteGroups.conversation-collapse.conversation-list-item.no-search-highlight-text",
-                                      "value": 1281,
-                                      "children": []
-                                    }
-                                  ]
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Call Audit.Call Audit.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1936,
+                                  "children": []
                                 }
                               ]
                             }
@@ -332,68 +310,705 @@
                   ]
                 },
                 {
-                  "name": "message-conversationList-filter",
-                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.message-conversationList-filter",
-                  "value": 781,
+                  "name": "folder-Client Partners",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Client Partners",
+                  "value": 1876,
                   "children": [
                     {
-                      "name": "ALL-tab-menu-item",
-                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.message-conversationList-filter.ALL-tab-menu-item",
-                      "value": 363,
-                      "children": []
-                    },
-                    {
-                      "name": "UNREAD-tab-menu-item",
-                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.message-conversationList-filter.UNREAD-tab-menu-item",
-                      "value": 418,
-                      "children": []
+                      "name": "Client Partners",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Client Partners.Client Partners",
+                      "value": 1876,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Client Partners.Client Partners.conversation-collapse",
+                          "value": 1876,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Client Partners.Client Partners.conversation-collapse.conversation-list-item",
+                              "value": 1876,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Client Partners.Client Partners.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1876,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "name": "teams",
-                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams",
-                  "value": 1457,
+                  "name": "folder-Dallas/Bill Gay",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Dallas/Bill Gay",
+                  "value": 1680,
                   "children": [
                     {
-                      "name": "message",
-                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message",
-                      "value": 1457,
+                      "name": "Dallas/Bill Gay",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Dallas/Bill Gay.Dallas/Bill Gay",
+                      "value": 1680,
                       "children": [
                         {
-                          "name": "teamGroups",
-                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups",
-                          "value": 1457,
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Dallas/Bill Gay.Dallas/Bill Gay.conversation-collapse",
+                          "value": 1680,
                           "children": [
                             {
-                              "name": "conversation-collapse",
-                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups.conversation-collapse",
-                              "value": 1258,
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Dallas/Bill Gay.Dallas/Bill Gay.conversation-collapse.conversation-list-item",
+                              "value": 1680,
                               "children": [
                                 {
-                                  "name": "conversation-list-item",
-                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups.conversation-collapse.conversation-list-item",
-                                  "value": 1258,
-                                  "children": [
-                                    {
-                                      "name": "no-search-highlight-text",
-                                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups.conversation-collapse.conversation-list-item.no-search-highlight-text",
-                                      "value": 1258,
-                                      "children": []
-                                    }
-                                  ]
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Dallas/Bill Gay.Dallas/Bill Gay.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1680,
+                                  "children": []
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Encompass Team",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Encompass Team",
+                  "value": 1616,
+                  "children": [
+                    {
+                      "name": "Encompass Team",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Encompass Team.Encompass Team",
+                      "value": 1616,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Encompass Team.Encompass Team.conversation-collapse",
+                          "value": 1616,
+                          "children": [
                             {
-                              "name": "message",
-                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups.message",
-                              "value": 199,
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Encompass Team.Encompass Team.conversation-collapse.conversation-list-item",
+                              "value": 1616,
                               "children": [
                                 {
-                                  "name": "teamGroups-header",
-                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.teams.message.teamGroups.message.teamGroups-header",
-                                  "value": 199,
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Encompass Team.Encompass Team.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1616,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Extra",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Extra",
+                  "value": 1616,
+                  "children": [
+                    {
+                      "name": "Extra",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Extra.Extra",
+                      "value": 1616,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Extra.Extra.conversation-collapse",
+                          "value": 1616,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Extra.Extra.conversation-collapse.conversation-list-item",
+                              "value": 1616,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Global",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Global",
+                  "value": 1784,
+                  "children": [
+                    {
+                      "name": "Global",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Global.Global",
+                      "value": 1784,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Global.Global.conversation-collapse",
+                          "value": 1784,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Global.Global.conversation-collapse.conversation-list-item",
+                              "value": 1784,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-ITSM CORE",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-ITSM CORE",
+                  "value": 1896,
+                  "children": [
+                    {
+                      "name": "ITSM CORE",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-ITSM CORE.ITSM CORE",
+                      "value": 1896,
+                      "children": [
+                        {
+                          "name": "ITSM CORE-header",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-ITSM CORE.ITSM CORE.ITSM CORE-header",
+                          "value": 1896,
+                          "children": [
+                            {
+                              "name": "conversation-list-section-header-arrow-up",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-ITSM CORE.ITSM CORE.ITSM CORE-header.conversation-list-section-header-arrow-up",
+                              "value": 1896,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Important groups",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Important groups",
+                  "value": 1616,
+                  "children": [
+                    {
+                      "name": "Important groups",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Important groups.Important groups",
+                      "value": 1616,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Important groups.Important groups.conversation-collapse",
+                          "value": 1616,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Important groups.Important groups.conversation-collapse.conversation-list-item",
+                              "value": 1616,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Incident Commander",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Incident Commander",
+                  "value": 1696,
+                  "children": [
+                    {
+                      "name": "Incident Commander",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Incident Commander.Incident Commander",
+                      "value": 1696,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Incident Commander.Incident Commander.conversation-collapse",
+                          "value": 1696,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Incident Commander.Incident Commander.conversation-collapse.conversation-list-item",
+                              "value": 1696,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Jupiter deployment",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Jupiter deployment",
+                  "value": 1696,
+                  "children": [
+                    {
+                      "name": "Jupiter deployment",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Jupiter deployment.Jupiter deployment",
+                      "value": 1696,
+                      "children": [
+                        {
+                          "name": "Jupiter deployment-header",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Jupiter deployment.Jupiter deployment.Jupiter deployment-header",
+                          "value": 1696,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-MTR-113153 Finish the federation contacts-handle contact presence",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-MTR-113153 Finish the federation contacts-handle contact presence",
+                  "value": 1954,
+                  "children": [
+                    {
+                      "name": "MTR-113153 Finish the federation contacts-handle contact presence",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-MTR-113153 Finish the federation contacts-handle contact presence.MTR-113153 Finish the federation contacts-handle contact presence",
+                      "value": 1954,
+                      "children": [
+                        {
+                          "name": "MTR-113153 Finish the federation contacts-handle contact presence-header",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-MTR-113153 Finish the federation contacts-handle contact presence.MTR-113153 Finish the federation contacts-handle contact presence.MTR-113153 Finish the federation contacts-handle contact presence-header",
+                          "value": 1954,
+                          "children": [
+                            {
+                              "name": "conversation-list-section-header-arrow-down",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-MTR-113153 Finish the federation contacts-handle contact presence.MTR-113153 Finish the federation contacts-handle contact presence.MTR-113153 Finish the federation contacts-handle contact presence-header.conversation-list-section-header-arrow-down",
+                              "value": 1954,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Main Chat",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Main Chat",
+                  "value": 1680,
+                  "children": [
+                    {
+                      "name": "Main Chat",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Main Chat.Main Chat",
+                      "value": 1680,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Main Chat.Main Chat.conversation-collapse",
+                          "value": 1680,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Main Chat.Main Chat.conversation-collapse.conversation-list-item",
+                              "value": 1680,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Main Chat.Main Chat.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1680,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-NABOO",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-NABOO",
+                  "value": 1672,
+                  "children": [
+                    {
+                      "name": "NABOO",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-NABOO.NABOO",
+                      "value": 1672,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-NABOO.NABOO.conversation-collapse",
+                          "value": 1672,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-NABOO.NABOO.conversation-collapse.conversation-list-item",
+                              "value": 1672,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-NABOO.NABOO.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1672,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-P1: Temp",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-P1: Temp",
+                  "value": 1708,
+                  "children": [
+                    {
+                      "name": "P1: Temp",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-P1: Temp.P1: Temp",
+                      "value": 1708,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-P1: Temp.P1: Temp.conversation-collapse",
+                          "value": 1708,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-P1: Temp.P1: Temp.conversation-collapse.conversation-list-item",
+                              "value": 1708,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-P1: Temp.P1: Temp.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1708,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-PAM Training 2023",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-PAM Training 2023",
+                  "value": 1670,
+                  "children": [
+                    {
+                      "name": "PAM Training 2023",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-PAM Training 2023.PAM Training 2023",
+                      "value": 1670,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-PAM Training 2023.PAM Training 2023.conversation-collapse",
+                          "value": 1670,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-PAM Training 2023.PAM Training 2023.conversation-collapse.conversation-list-item",
+                              "value": 1670,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-PAM Training 2023.PAM Training 2023.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1670,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-RC+HR",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-RC+HR",
+                  "value": 1928,
+                  "children": [
+                    {
+                      "name": "RC+HR",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-RC+HR.RC+HR",
+                      "value": 1928,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-RC+HR.RC+HR.conversation-collapse",
+                          "value": 1928,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-RC+HR.RC+HR.conversation-collapse.conversation-list-item",
+                              "value": 1928,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-REGRESSION",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-REGRESSION",
+                  "value": 1816,
+                  "children": [
+                    {
+                      "name": "REGRESSION",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-REGRESSION.REGRESSION",
+                      "value": 1816,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-REGRESSION.REGRESSION.conversation-collapse",
+                          "value": 1816,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-REGRESSION.REGRESSION.conversation-collapse.conversation-list-item",
+                              "value": 1816,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-REGRESSION.REGRESSION.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1816,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Revenue Common groups",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Revenue Common groups",
+                  "value": 1768,
+                  "children": [
+                    {
+                      "name": "Revenue Common groups",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Revenue Common groups.Revenue Common groups",
+                      "value": 1768,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Revenue Common groups.Revenue Common groups.conversation-collapse",
+                          "value": 1768,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Revenue Common groups.Revenue Common groups.conversation-collapse.conversation-list-item",
+                              "value": 1768,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Revenue Common groups.Revenue Common groups.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1768,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-SMBx",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-SMBx",
+                  "value": 1624,
+                  "children": [
+                    {
+                      "name": "SMBx",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-SMBx.SMBx",
+                      "value": 1624,
+                      "children": [
+                        {
+                          "name": "SMBx-header",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-SMBx.SMBx.SMBx-header",
+                          "value": 1624,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Social Stuff",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Social Stuff",
+                  "value": 3674,
+                  "children": [
+                    {
+                      "name": "Social Stuff",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Social Stuff.Social Stuff",
+                      "value": 3674,
+                      "children": [
+                        {
+                          "name": "Social Stuff-header",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Social Stuff.Social Stuff.Social Stuff-header",
+                          "value": 1837,
+                          "children": []
+                        },
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Social Stuff.Social Stuff.conversation-collapse",
+                          "value": 1837,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Social Stuff.Social Stuff.conversation-collapse.conversation-list-item",
+                              "value": 1837,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Social Stuff.Social Stuff.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1837,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Solution Engineers",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Solution Engineers",
+                  "value": 1680,
+                  "children": [
+                    {
+                      "name": "Solution Engineers",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Solution Engineers.Solution Engineers",
+                      "value": 1680,
+                      "children": [
+                        {
+                          "name": "Solution Engineers-header",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Solution Engineers.Solution Engineers.Solution Engineers-header",
+                          "value": 1680,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Support",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Support",
+                  "value": 1764,
+                  "children": [
+                    {
+                      "name": "Support",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Support.Support",
+                      "value": 1764,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Support.Support.conversation-collapse",
+                          "value": 1764,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Team KALAM",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Team KALAM",
+                  "value": 1752,
+                  "children": [
+                    {
+                      "name": "Team KALAM",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Team KALAM.Team KALAM",
+                      "value": 1752,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Team KALAM.Team KALAM.conversation-collapse",
+                          "value": 1752,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Team KALAM.Team KALAM.conversation-collapse.conversation-list-item",
+                              "value": 1752,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Technology",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Technology",
+                  "value": 1632,
+                  "children": [
+                    {
+                      "name": "Technology",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Technology.Technology",
+                      "value": 1632,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Technology.Technology.conversation-collapse",
+                          "value": 1632,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Technology.Technology.conversation-collapse.conversation-list-item",
+                              "value": 1632,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Technology.Technology.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1632,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "folder-Tier 3 only",
+                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Tier 3 only",
+                  "value": 1855,
+                  "children": [
+                    {
+                      "name": "Tier 3 only",
+                      "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Tier 3 only.Tier 3 only",
+                      "value": 1855,
+                      "children": [
+                        {
+                          "name": "conversation-collapse",
+                          "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Tier 3 only.Tier 3 only.conversation-collapse",
+                          "value": 1855,
+                          "children": [
+                            {
+                              "name": "conversation-list-item",
+                              "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Tier 3 only.Tier 3 only.conversation-collapse.conversation-list-item",
+                              "value": 1855,
+                              "children": [
+                                {
+                                  "name": "no-search-highlight-text",
+                                  "path": "root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-Tier 3 only.Tier 3 only.conversation-collapse.conversation-list-item.no-search-highlight-text",
+                                  "value": 1855,
                                   "children": []
                                 }
                               ]
@@ -411,19 +1026,46 @@
       ]
     },
     {
-      "name": "Viewer",
-      "path": "root.Viewer",
-      "value": 139,
+      "name": "VersatileResponsiveLayout-SETTING",
+      "path": "root.VersatileResponsiveLayout-SETTING",
+      "value": 1921,
       "children": [
         {
-          "name": "ViewerHeader",
-          "path": "root.Viewer.ViewerHeader",
-          "value": 139,
+          "name": "SETTING_CONTENT_PANEL_Panel",
+          "path": "root.VersatileResponsiveLayout-SETTING.SETTING_CONTENT_PANEL_Panel",
+          "value": 1921,
           "children": [
             {
-              "name": "viewerActions",
-              "path": "root.Viewer.ViewerHeader.viewerActions",
-              "value": 139,
+              "name": "settingPage-audio",
+              "path": "root.VersatileResponsiveLayout-SETTING.SETTING_CONTENT_PANEL_Panel.settingPage-audio",
+              "value": 1921,
+              "children": [
+                {
+                  "name": "settingSection-audioInput",
+                  "path": "root.VersatileResponsiveLayout-SETTING.SETTING_CONTENT_PANEL_Panel.settingPage-audio.settingSection-audioInput",
+                  "value": 1921,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "callSwitchDialog",
+      "path": "root.callSwitchDialog",
+      "value": 1695,
+      "children": [
+        {
+          "name": "DialogActions",
+          "path": "root.callSwitchDialog.DialogActions",
+          "value": 1695,
+          "children": [
+            {
+              "name": "callSwitchCancelButton",
+              "path": "root.callSwitchDialog.DialogActions.callSwitchCancelButton",
+              "value": 1695,
               "children": []
             }
           ]
@@ -431,19 +1073,25 @@
       ]
     },
     {
-      "name": "groupSearch",
-      "path": "root.groupSearch",
-      "value": 194,
+      "name": "deleteSmsConfirmDialog",
+      "path": "root.deleteSmsConfirmDialog",
+      "value": 1886,
+      "children": []
+    },
+    {
+      "name": "doubleConfirmDialog",
+      "path": "root.doubleConfirmDialog",
+      "value": 1816,
       "children": [
         {
-          "name": "virtualized-list",
-          "path": "root.groupSearch.virtualized-list",
-          "value": 194,
+          "name": "DialogActions",
+          "path": "root.doubleConfirmDialog.DialogActions",
+          "value": 1816,
           "children": [
             {
-              "name": "groupSearchItem",
-              "path": "root.groupSearch.virtualized-list.groupSearchItem",
-              "value": 194,
+              "name": "doubleConfirmDialogCancelButton",
+              "path": "root.doubleConfirmDialog.DialogActions.doubleConfirmDialogCancelButton",
+              "value": 1816,
               "children": []
             }
           ]
@@ -451,32 +1099,151 @@
       ]
     },
     {
-      "name": "leftPanel",
-      "path": "root.leftPanel",
-      "value": 1241,
+      "name": "inboxTab__tab",
+      "path": "root.inboxTab__tab",
+      "value": 3711,
       "children": [
         {
-          "name": "meet",
-          "path": "root.leftPanel.meet",
-          "value": 187,
-          "children": []
-        },
+          "name": "inboxTab__leftPanel",
+          "path": "root.inboxTab__tab.inboxTab__leftPanel",
+          "value": 3711,
+          "children": [
+            {
+              "name": "inboxTab__leftPanel",
+              "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel",
+              "value": 3711,
+              "children": [
+                {
+                  "name": "sms-all",
+                  "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-all",
+                  "value": 1844,
+                  "children": [
+                    {
+                      "name": "sms-all-list",
+                      "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-all.sms-all-list",
+                      "value": 1844,
+                      "children": [
+                        {
+                          "name": "virtualized-list",
+                          "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-all.sms-all-list.virtualized-list",
+                          "value": 1844,
+                          "children": [
+                            {
+                              "name": "sms-item",
+                              "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item",
+                              "value": 1844,
+                              "children": [
+                                {
+                                  "name": "phone__item--primaryInfo",
+                                  "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item.phone__item--primaryInfo",
+                                  "value": 1844,
+                                  "children": [
+                                    {
+                                      "name": "phone__contact--primaryInfo",
+                                      "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item.phone__item--primaryInfo.phone__contact--primaryInfo",
+                                      "value": 1844,
+                                      "children": [
+                                        {
+                                          "name": "contact-source-icon",
+                                          "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item.phone__item--primaryInfo.phone__contact--primaryInfo.contact-source-icon",
+                                          "value": 1844,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "sms-unread",
+                  "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-unread",
+                  "value": 1867,
+                  "children": [
+                    {
+                      "name": "sms-unread-list",
+                      "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-unread.sms-unread-list",
+                      "value": 1867,
+                      "children": [
+                        {
+                          "name": "virtualized-list",
+                          "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-unread.sms-unread-list.virtualized-list",
+                          "value": 1867,
+                          "children": [
+                            {
+                              "name": "sms-item",
+                              "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-unread.sms-unread-list.virtualized-list.sms-item",
+                              "value": 1867,
+                              "children": [
+                                {
+                                  "name": "phone__item--primaryInfo",
+                                  "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-unread.sms-unread-list.virtualized-list.sms-item.phone__item--primaryInfo",
+                                  "value": 1867,
+                                  "children": [
+                                    {
+                                      "name": "phone__contact--primaryInfo",
+                                      "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-unread.sms-unread-list.virtualized-list.sms-item.phone__item--primaryInfo.phone__contact--primaryInfo",
+                                      "value": 1867,
+                                      "children": [
+                                        {
+                                          "name": "no-search-highlight-text",
+                                          "path": "root.inboxTab__tab.inboxTab__leftPanel.inboxTab__leftPanel.sms-unread.sms-unread-list.virtualized-list.sms-item.phone__item--primaryInfo.phone__contact--primaryInfo.no-search-highlight-text",
+                                          "value": 1867,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "join-meeting-recent-list",
+      "path": "root.join-meeting-recent-list",
+      "value": 1856,
+      "children": [
         {
-          "name": "messages",
-          "path": "root.leftPanel.messages",
-          "value": 331,
-          "children": []
-        },
+          "name": "join-recent-list-item-667667667",
+          "path": "root.join-meeting-recent-list.join-recent-list-item-667667667",
+          "value": 1856,
+          "children": [
+            {
+              "name": "multiple-call-item-info",
+              "path": "root.join-meeting-recent-list.join-recent-list-item-667667667.multiple-call-item-info",
+              "value": 1856,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "necf-dialog",
+      "path": "root.necf-dialog",
+      "value": 1766,
+      "children": [
         {
-          "name": "phone",
-          "path": "root.leftPanel.phone",
-          "value": 432,
-          "children": []
-        },
-        {
-          "name": "text",
-          "path": "root.leftPanel.text",
-          "value": 291,
+          "name": "e911-nickname",
+          "path": "root.necf-dialog.e911-nickname",
+          "value": 1766,
           "children": []
         }
       ]
@@ -484,77 +1251,60 @@
     {
       "name": "phone__tab",
       "path": "root.phone__tab",
-      "value": 1923,
+      "value": 3559,
       "children": [
         {
           "name": "phone__leftPanel",
           "path": "root.phone__tab.phone__leftPanel",
-          "value": 1791,
+          "value": 3559,
           "children": [
             {
               "name": "phone__leftPanel",
               "path": "root.phone__tab.phone__leftPanel.phone__leftPanel",
-              "value": 1791,
+              "value": 3559,
               "children": [
                 {
-                  "name": "TabListBar__item--hud",
-                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.TabListBar__item--hud",
-                  "value": 150,
-                  "children": []
-                },
-                {
-                  "name": "TabListBar__item--recent",
-                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.TabListBar__item--recent",
-                  "value": 640,
-                  "children": []
-                },
-                {
-                  "name": "TabListBar__item--voicemail",
-                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.TabListBar__item--voicemail",
-                  "value": 435,
-                  "children": []
-                },
-                {
-                  "name": "recent-all",
-                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all",
-                  "value": 383,
+                  "name": "62994921012",
+                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.62994921012",
+                  "value": 1704,
                   "children": [
                     {
-                      "name": "recent-all-list",
-                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list",
-                      "value": 383,
+                      "name": "voicemail-62994921012-unread",
+                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.62994921012.voicemail-62994921012-unread",
+                      "value": 1704,
                       "children": [
                         {
-                          "name": "virtualized-list",
-                          "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list",
-                          "value": 383,
+                          "name": "voicemail-62994921012-unread-list",
+                          "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.62994921012.voicemail-62994921012-unread.voicemail-62994921012-unread-list",
+                          "value": 1704,
                           "children": [
                             {
-                              "name": "call-history-item",
-                              "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list.call-history-item",
-                              "value": 383,
+                              "name": "virtualized-list",
+                              "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.62994921012.voicemail-62994921012-unread.voicemail-62994921012-unread-list.virtualized-list",
+                              "value": 1704,
                               "children": [
                                 {
-                                  "name": "phone__item--primaryInfo",
-                                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list.call-history-item.phone__item--primaryInfo",
-                                  "value": 383,
+                                  "name": "voicemail-item",
+                                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.62994921012.voicemail-62994921012-unread.voicemail-62994921012-unread-list.virtualized-list.voicemail-item",
+                                  "value": 1704,
                                   "children": [
                                     {
-                                      "name": "callLogItem__secondaryInfo",
-                                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list.call-history-item.phone__item--primaryInfo.callLogItem__secondaryInfo",
-                                      "value": 211,
-                                      "children": []
-                                    },
-                                    {
-                                      "name": "phone__contact--primaryInfo",
-                                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list.call-history-item.phone__item--primaryInfo.phone__contact--primaryInfo",
-                                      "value": 172,
+                                      "name": "phone__item--primaryInfo",
+                                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.62994921012.voicemail-62994921012-unread.voicemail-62994921012-unread-list.virtualized-list.voicemail-item.phone__item--primaryInfo",
+                                      "value": 1704,
                                       "children": [
                                         {
-                                          "name": "no-search-highlight-text",
-                                          "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-all.recent-all-list.virtualized-list.call-history-item.phone__item--primaryInfo.phone__contact--primaryInfo.no-search-highlight-text",
-                                          "value": 172,
-                                          "children": []
+                                          "name": "phone__contact--primaryInfo",
+                                          "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.62994921012.voicemail-62994921012-unread.voicemail-62994921012-unread-list.virtualized-list.voicemail-item.phone__item--primaryInfo.phone__contact--primaryInfo",
+                                          "value": 1704,
+                                          "children": [
+                                            {
+                                              "name": "no-search-highlight-text",
+                                              "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.62994921012.voicemail-62994921012-unread.voicemail-62994921012-unread-list.virtualized-list.voicemail-item.phone__item--primaryInfo.phone__contact--primaryInfo.no-search-highlight-text",
+                                              "value": 1704,
+                                              "children": []
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -569,62 +1319,14 @@
                   ]
                 },
                 {
-                  "name": "voicemail-personal-all",
-                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.voicemail-personal-all",
-                  "value": 183,
+                  "name": "recent-inbound",
+                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-inbound",
+                  "value": 1855,
                   "children": [
                     {
-                      "name": "voicemail-personal-all-list",
-                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.voicemail-personal-all.voicemail-personal-all-list",
-                      "value": 183,
-                      "children": [
-                        {
-                          "name": "virtualized-list",
-                          "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.voicemail-personal-all.voicemail-personal-all-list.virtualized-list",
-                          "value": 183,
-                          "children": [
-                            {
-                              "name": "voicemail-item",
-                              "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.voicemail-personal-all.voicemail-personal-all-list.virtualized-list.voicemail-item",
-                              "value": 183,
-                              "children": [
-                                {
-                                  "name": "phone__item--primaryInfo",
-                                  "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.voicemail-personal-all.voicemail-personal-all-list.virtualized-list.voicemail-item.phone__item--primaryInfo",
-                                  "value": 183,
-                                  "children": []
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "phone__rightPanel",
-          "path": "root.phone__tab.phone__rightPanel",
-          "value": 132,
-          "children": [
-            {
-              "name": "phone__rightPanel",
-              "path": "root.phone__tab.phone__rightPanel.phone__rightPanel",
-              "value": 132,
-              "children": [
-                {
-                  "name": "phone__genericDialerPanel",
-                  "path": "root.phone__tab.phone__rightPanel.phone__rightPanel.phone__genericDialerPanel",
-                  "value": 132,
-                  "children": [
-                    {
-                      "name": "telephony-dialer-header",
-                      "path": "root.phone__tab.phone__rightPanel.phone__rightPanel.phone__genericDialerPanel.telephony-dialer-header",
-                      "value": 132,
+                      "name": "recent-inbound-list",
+                      "path": "root.phone__tab.phone__leftPanel.phone__leftPanel.recent-inbound.recent-inbound-list",
+                      "value": 1855,
                       "children": []
                     }
                   ]
@@ -636,198 +1338,15 @@
       ]
     },
     {
-      "name": "sms__tab",
-      "path": "root.sms__tab",
-      "value": 936,
+      "name": "top-banner-container",
+      "path": "root.top-banner-container",
+      "value": 1669,
       "children": [
         {
-          "name": "SMSTab__leftPanel",
-          "path": "root.sms__tab.SMSTab__leftPanel",
-          "value": 660,
-          "children": [
-            {
-              "name": "SMSTab__leftPanel",
-              "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel",
-              "value": 660,
-              "children": [
-                {
-                  "name": "sms-all",
-                  "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all",
-                  "value": 660,
-                  "children": [
-                    {
-                      "name": "sms-all-list",
-                      "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list",
-                      "value": 660,
-                      "children": [
-                        {
-                          "name": "virtualized-list",
-                          "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list.virtualized-list",
-                          "value": 660,
-                          "children": [
-                            {
-                              "name": "sms-item",
-                              "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item",
-                              "value": 660,
-                              "children": [
-                                {
-                                  "name": "phone__item--primaryInfo",
-                                  "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item.phone__item--primaryInfo",
-                                  "value": 660,
-                                  "children": [
-                                    {
-                                      "name": "phone__contact--primaryInfo",
-                                      "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item.phone__item--primaryInfo.phone__contact--primaryInfo",
-                                      "value": 660,
-                                      "children": [
-                                        {
-                                          "name": "no-search-highlight-text",
-                                          "path": "root.sms__tab.SMSTab__leftPanel.SMSTab__leftPanel.sms-all.sms-all-list.virtualized-list.sms-item.phone__item--primaryInfo.phone__contact--primaryInfo.no-search-highlight-text",
-                                          "value": 660,
-                                          "children": []
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "SMSTab__tab",
-          "path": "root.sms__tab.SMSTab__tab",
-          "value": 276,
-          "children": [
-            {
-              "name": "SMSTab__tab",
-              "path": "root.sms__tab.SMSTab__tab.SMSTab__tab",
-              "value": 276,
-              "children": [
-                {
-                  "name": "SMSDetail",
-                  "path": "root.sms__tab.SMSTab__tab.SMSTab__tab.SMSDetail",
-                  "value": 276,
-                  "children": [
-                    {
-                      "name": "sms-input",
-                      "path": "root.sms__tab.SMSTab__tab.SMSTab__tab.SMSDetail.sms-input",
-                      "value": 276,
-                      "children": [
-                        {
-                          "name": "editor-container-wrapper",
-                          "path": "root.sms__tab.SMSTab__tab.SMSTab__tab.SMSDetail.sms-input.editor-container-wrapper",
-                          "value": 276,
-                          "children": [
-                            {
-                              "name": "post-button",
-                              "path": "root.sms__tab.SMSTab__tab.SMSTab__tab.SMSDetail.sms-input.editor-container-wrapper.post-button",
-                              "value": 276,
-                              "children": []
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "telephony-dialpad-btn",
-      "path": "root.telephony-dialpad-btn",
-      "value": 723,
-      "children": []
-    },
-    {
-      "name": "telephony-minimized-view",
-      "path": "root.telephony-minimized-view",
-      "value": 189,
-      "children": [
-        {
-          "name": "telephony-end-btn",
-          "path": "root.telephony-minimized-view.telephony-end-btn",
-          "value": 189,
+          "name": "switch-meeting-banner",
+          "path": "root.top-banner-container.switch-meeting-banner",
+          "value": 1669,
           "children": []
-        }
-      ]
-    },
-    {
-      "name": "topBarAvatar",
-      "path": "root.topBarAvatar",
-      "value": 588,
-      "children": []
-    },
-    {
-      "name": "video-incoming-container",
-      "path": "root.video-incoming-container",
-      "value": 177,
-      "children": [
-        {
-          "name": "video-call-answer-btn",
-          "path": "root.video-incoming-container.video-call-answer-btn",
-          "value": 177,
-          "children": []
-        }
-      ]
-    },
-    {
-      "name": "video__tab",
-      "path": "root.video__tab",
-      "value": 380,
-      "children": [
-        {
-          "name": "video__leftPanel",
-          "path": "root.video__tab.video__leftPanel",
-          "value": 380,
-          "children": [
-            {
-              "name": "video__leftPanel",
-              "path": "root.video__tab.video__leftPanel.video__leftPanel",
-              "value": 380,
-              "children": [
-                {
-                  "name": "calendar-wrapper",
-                  "path": "root.video__tab.video__leftPanel.video__leftPanel.calendar-wrapper",
-                  "value": 380,
-                  "children": [
-                    {
-                      "name": "virtualized-list",
-                      "path": "root.video__tab.video__leftPanel.video__leftPanel.calendar-wrapper.virtualized-list",
-                      "value": 380,
-                      "children": [
-                        {
-                          "name": "calendar-event-item",
-                          "path": "root.video__tab.video__leftPanel.video__leftPanel.calendar-wrapper.virtualized-list.calendar-event-item",
-                          "value": 380,
-                          "children": [
-                            {
-                              "name": "calendar-event-item-join-button",
-                              "path": "root.video__tab.video__leftPanel.video__leftPanel.calendar-wrapper.virtualized-list.calendar-event-item.calendar-event-item-join-button",
-                              "value": 380,
-                              "children": []
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ]
     }

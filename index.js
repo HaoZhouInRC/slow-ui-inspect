@@ -50,8 +50,9 @@ const seriesType = {
     function getLevelOption() {
       return [
         {
+          // root level
           itemStyle: {
-            borderColor: '#777',
+            borderColor: '#333',
             borderWidth: 0,
             gapWidth: 1,
           },
@@ -59,10 +60,10 @@ const seriesType = {
             show: false,
           },
         },
-        {
+        ...['#555', '#777', '#999', '#bbb', '#ddd', '#fff'].map((color) => ({
           itemStyle: {
-            borderColor: '#555',
-            borderWidth: 5,
+            borderColor: color,
+            borderWidth: 3,
             gapWidth: 1,
           },
           emphasis: {
@@ -70,7 +71,7 @@ const seriesType = {
               borderColor: '#ddd',
             },
           },
-        },
+        })),
         {
           colorSaturation: [0.35, 0.5],
           itemStyle: {
@@ -82,7 +83,10 @@ const seriesType = {
       ];
     }
 
-    return {
+    /**
+     * @type {import('echarts').EChartOption.SeriesTreemap}
+     */
+    const options = {
       name: 'Slow UI Element Count',
       type: 'treemap',
       visibleMin: 300,
@@ -100,6 +104,8 @@ const seriesType = {
       levels: getLevelOption(),
       data: data.children,
     };
+
+    return options;
   },
 };
 
@@ -133,10 +139,10 @@ const renderChart = (chart) => {
               treePath.push(treePathInfo[i].name);
             }
             return [
-              '<div class="tooltip-title">' +
+              '<div class="tooltip-title" style="max-width: 240px; white-space: break-spaces; word-wrap: break-word;">' +
                 formatUtil.encodeHTML(treePath.join('.')) +
                 '</div>',
-              'Count: ' + formatUtil.addCommas(value) + ' ',
+              'Avg time: ' + formatUtil.addCommas(value) + ' ms',
             ].join('');
           },
         },
