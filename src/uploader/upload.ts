@@ -9,6 +9,8 @@ export const initUpload = () => {
     const file = (event.target as HTMLInputElement).files?.[0];
 
     if (file) {
+      ev.emit(EventType.selectFiles, file.name);
+
       // read the file
       const reader = new FileReader();
       reader.onload = (e) => {

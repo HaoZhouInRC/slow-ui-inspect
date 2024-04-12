@@ -1,5 +1,6 @@
 import * as Echarts from 'echarts';
 import { EventType, ev } from '../eventmitter';
+import { getTitle } from '../title';
 
 const seriesType = {
   tree: (data: any) => ({
@@ -113,7 +114,7 @@ export const renderChart = (chart: Echarts.EChartsType, data: any) => {
   chart.setOption(
     (option = {
       title: {
-        text: 'Slow UI Element path & time',
+        text: `Slow UI From "${getTitle()}"`,
         left: 'center',
         top: 24,
       },
