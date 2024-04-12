@@ -1,4 +1,4 @@
 import './title';
 import './uploader';
-import './chart-type-selector';
+import './chart-tools';
 import './render';

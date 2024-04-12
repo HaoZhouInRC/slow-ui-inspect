@@ -1,6 +1,7 @@
 import * as Echarts from 'echarts';
 import { EventType, ev } from '../eventmitter';
 import { getTitle } from '../title';
+import { transformData } from './transform-data';
 
 const seriesType = {
   tree: (data: any) => ({
@@ -90,29 +91,19 @@ const seriesType = {
   },
 };
 
-const changeChartType = (
-  chart: Echarts.EChartsType,
-  data: any,
-  type: keyof typeof seriesType,
-) => {
-  chart.clear();
-
-  const option = chart.getOption();
-
-  option.series = [seriesType[type](data)];
-
-  chart.setOption(option);
-};
-
-export const renderChart = (chart: Echarts.EChartsType, data: any) => {
-  let option: Echarts.EChartOption | null = null;
-
+export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
   chart.hideLoading();
 
-  const formatUtil = Echarts.format;
+  let chartType: keyof typeof seriesType = 'treeMap';
+  let cleanDynamicData = false;
 
-  chart.setOption(
-    (option = {
+  function _renderChart() {
+    chart.clear();
+
+    const formatUtil = Echarts.format;
+    const data = transformData(rawData, cleanDynamicData);
+
+    const option: Echarts.EChartOption = {
       title: {
         text: `Slow UI From "${getTitle()}"`,
         left: 'center',
@@ -135,16 +126,21 @@ export const renderChart = (chart: Echarts.EChartsType, data: any) => {
           ].join('');
         },
       },
-      // TODO: support change series type
-      series: [seriesType['treeMap'](data)],
-    }),
-  );
+      series: [seriesType[chartType](data)],
+    };
 
-  if (option && typeof option === 'object') {
     chart.setOption(option);
   }
 
   ev.on(EventType.chartTypeChange, (type: keyof typeof seriesType) => {
-    changeChartType(chart, data, type);
+    chartType = type;
+    _renderChart();
   });
+
+  ev.on(EventType.cleanDynamicData, (value: boolean) => {
+    cleanDynamicData = value;
+    _renderChart();
+  });
+
+  _renderChart();
 };

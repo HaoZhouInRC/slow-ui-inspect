@@ -10,9 +10,6 @@ ev.on(EventType.upload, (data) => {
   // init chart
   const chart = initChart();
 
-  // transform data
-  const chartData = transformData(data);
-
   // render chart
-  renderChart(chart, chartData);
+  renderChart(chart, data);
 });

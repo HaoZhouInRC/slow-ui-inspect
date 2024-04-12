@@ -28,8 +28,22 @@
         right: 10px;
         z-index: 1000;
 
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        padding: 8px;
+
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+      }
+
+      #operation-bar > div {
+        margin-bottom: 8px;
+      }
+
+      #operation-bar > * {
+        user-select: none;
       }
     </style>
   </head>
@@ -41,11 +55,22 @@
     </div>
 
     <div id="operation-bar">
-      <label for="chart-type-selector">Select Chart Type</label>
-      <select name="type" id="chart-type-selector">
-        <option value="treeMap" selected>treeMap</option>
-        <option value="tree">tree</option>
-      </select>
+      <div>
+        <label for="chart-type-selector" style="margin-right: 8px"
+          >Select Chart Type:
+        </label>
+        <select name="type" id="chart-type-selector">
+          <option value="treeMap" selected>treeMap</option>
+          <option value="tree">tree</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="clean-dynamic-data" style="margin-right: 8px; cursor: pointer;"
+          >Clean dynamic data:
+        </label>
+        <input type="checkbox" id="clean-dynamic-data"></checkbox>
+      </div>
     </div>
 
     <script type="module" src="./src/index.ts"></script>

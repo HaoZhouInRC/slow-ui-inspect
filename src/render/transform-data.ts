@@ -5,7 +5,26 @@ export interface Item {
   children: Item[];
 }
 
-export const transformData = (fileContent: string) => {
+/* This is templary function to clean "message data" */
+const normalizePath = (path: string) => {
+  const messageFolder = /\.leftRail\.folder\-(.*?)\./.exec(path)?.[1];
+
+  // root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-MTR-113153 Finish the federation contacts-handle contact presence.MTR-113153 Finish the federation contacts-handle contact presence.MTR-113153 Finish the federation contacts-handle contact presence-header
+  if (messageFolder) {
+    if (path.includes(`-${messageFolder}.${messageFolder}.${messageFolder}-`)) {
+      return path.replace(
+        `-${messageFolder}.${messageFolder}.${messageFolder}-`,
+        '.',
+      );
+    } else {
+      return path.replace(`-${messageFolder}.${messageFolder}.`, '.');
+    }
+  }
+
+  return path;
+};
+
+export const transformData = (fileContent: string, cleanUpData = false) => {
   const data = fileContent.split('\r\n').filter(Boolean).slice(1).sort();
 
   const map = new Map();
@@ -17,13 +36,22 @@ export const transformData = (fileContent: string) => {
     };
   };
 
-  data.forEach((line) => {
-    const pathStr = line.slice(0, line.indexOf(','));
+  const valuse = data.map((line) => {
+    const pathStr = line.slice(0, line.indexOf(',')).replaceAll('"', '');
     const valueStr = line.slice(line.indexOf(','));
 
-    const path = pathStr.replaceAll('"', '');
+    const path = cleanUpData ? normalizePath(pathStr) : pathStr;
     const value = parseInt(valueStr.replaceAll(',', '').replaceAll('"', ''));
 
+    return {
+      path,
+      value,
+    };
+  });
+
+  valuse.sort((a, b) => a.value - b.value);
+
+  valuse.forEach(({ path, value }) => {
     path.split('.').reduce((pre, cur) => {
       const path = (pre ? pre + '.' : '') + cur;
 
@@ -49,7 +77,6 @@ export const transformData = (fileContent: string) => {
       if (!item) return;
 
       item.value = item.children.reduce((acc, child) => acc + child.value, 0);
-      item.children.sort((a, b) => b.value - a.value);
 
       updateParentValue(
         map.get(item.path.slice(0, item.path.lastIndexOf('.'))),
