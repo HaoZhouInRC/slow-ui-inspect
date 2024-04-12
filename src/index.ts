@@ -1,5 +1,3 @@
-import './upload';
+import './uploader';
+import './chart-type-selector';
 import './render';
-
-// // const chart = initChart();
-// // renderChart(chart);

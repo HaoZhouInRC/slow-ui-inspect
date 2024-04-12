@@ -1,34 +1,53 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Inspect Slow UI- Apache ECharts</title>
-  <style>
+  <head>
+    <meta charset="utf-8" />
+    <title>Inspect Slow UI- Apache ECharts</title>
+    <style>
       * {
-          margin: 0;
-          padding: 0;
+        margin: 0;
+        padding: 0;
       }
 
       #chart-container {
-          position: relative;
-          height: 100vh;
-          overflow: hidden;
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
       }
 
       #upload {
-          position: absolute;
-          top: 10px;
-          left: 10px;
-          z-index: 1000;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
       }
-  </style>
-</head>
-<body>
-<div id="chart-container"></div>
-<div id="upload">
-  <input id="upload-input" accept="text/csv" type="file">
-</div>
 
-<script type="module" src="./src/index.ts"></script>
-</body>
+      #operation-bar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chart-container"></div>
+
+    <div id="upload">
+      <input id="upload-input" accept="text/csv" type="file" />
+    </div>
+
+    <div id="operation-bar">
+      <label for="chart-type-selector">Select Chart Type</label>
+      <select name="type" id="chart-type-selector">
+        <option value="treeMap" selected>treeMap</option>
+        <option value="tree">tree</option>
+      </select>
+    </div>
+
+    <script type="module" src="./src/index.ts"></script>
+  </body>
 </html>

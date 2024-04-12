@@ -1,9 +1,8 @@
-import SeriesTreemap = echarts.EChartOption.SeriesTreemap;
-import SeriesTree = echarts.EChartOption.SeriesTree;
 import * as Echarts from 'echarts';
+import { ev } from '../eventmitter';
 
 const seriesType = {
-  tree: (data: SeriesTree.DataObject[]) => ({
+  tree: (data: any) => ({
     type: 'tree',
     data: [data],
     top: '1%',
@@ -27,13 +26,12 @@ const seriesType = {
     emphasis: {
       focus: 'descendant',
     },
-
-    expandAndCollapse: false,
+    expandAndCollapse: true,
     animationDuration: 550,
     animationDurationUpdate: 750,
     initialTreeDepth: 10,
   }),
-  treeMap: (data: { children: SeriesTreemap.DataObject[] }) => {
+  treeMap: (data: any) => {
     function getLevelOption() {
       return [
         {
@@ -72,7 +70,7 @@ const seriesType = {
 
     return {
       name: 'Slow UI Element Count',
-      type: 'sunburst',
+      type: 'treemap',
       visibleMin: 300,
       label: {
         show: true,
@@ -91,10 +89,25 @@ const seriesType = {
   },
 };
 
+const changeChartType = (
+  chart: Echarts.EChartsType,
+  data: any,
+  type: keyof typeof seriesType,
+) => {
+  chart.clear();
+
+  const option = chart.getOption();
+
+  option.series = [seriesType[type](data)];
+
+  chart.setOption(option);
+};
+
 export const renderChart = (chart: Echarts.EChartsType, data: any) => {
   let option: Echarts.EChartOption | null = null;
 
   chart.hideLoading();
+
   const formatUtil = Echarts.format;
 
   chart.setOption(
@@ -105,6 +118,7 @@ export const renderChart = (chart: Echarts.EChartsType, data: any) => {
         top: 24,
       },
       tooltip: {
+        trigger: 'item',
         formatter: function (info: any) {
           const value = info.value;
           const treePathInfo = info.treePathInfo;
@@ -128,4 +142,8 @@ export const renderChart = (chart: Echarts.EChartsType, data: any) => {
   if (option && typeof option === 'object') {
     chart.setOption(option);
   }
+
+  ev.on('chart-type-change', (type: keyof typeof seriesType) => {
+    changeChartType(chart, data, type);
+  });
 };

@@ -49,6 +49,7 @@ export const transformData = (fileContent: string) => {
       if (!item) return;
 
       item.value = item.children.reduce((acc, child) => acc + child.value, 0);
+      item.children.sort((a, b) => b.value - a.value);
 
       updateParentValue(
         map.get(item.path.slice(0, item.path.lastIndexOf('.'))),
