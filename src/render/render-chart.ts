@@ -1,5 +1,5 @@
 import * as Echarts from 'echarts';
-import { ev } from '../eventmitter';
+import { EventType, ev } from '../eventmitter';
 
 const seriesType = {
   tree: (data: any) => ({
@@ -143,7 +143,7 @@ export const renderChart = (chart: Echarts.EChartsType, data: any) => {
     chart.setOption(option);
   }
 
-  ev.on('chart-type-change', (type: keyof typeof seriesType) => {
+  ev.on(EventType.chartTypeChange, (type: keyof typeof seriesType) => {
     changeChartType(chart, data, type);
   });
 };

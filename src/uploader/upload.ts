@@ -1,4 +1,4 @@
-import { ev } from '../eventmitter';
+import { EventType, ev } from '../eventmitter';
 
 export const initUpload = () => {
   const element: HTMLInputElement = document.getElementById(
@@ -14,7 +14,7 @@ export const initUpload = () => {
       reader.onload = (e) => {
         const data = e.target?.result as string;
 
-        ev.emit('upload', data);
+        ev.emit(EventType.upload, data);
       };
 
       reader.readAsText(file);

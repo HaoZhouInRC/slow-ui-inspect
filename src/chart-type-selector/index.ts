@@ -1,4 +1,4 @@
-import { ev } from '../eventmitter';
+import { EventType, ev } from '../eventmitter';
 
 const initChartSelector = () => {
   const chartSelector = document.querySelector(
@@ -8,7 +8,7 @@ const initChartSelector = () => {
   chartSelector?.addEventListener('change', () => {
     console.log('Selected chart type:', chartSelector.value);
 
-    ev.emit('chart-type-change', chartSelector.value);
+    ev.emit(EventType.chartTypeChange, chartSelector.value);
   });
 };
 
