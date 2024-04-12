@@ -33,7 +33,7 @@ export const transformData = (
 ) => {
   const data = fileContent.split('\r\n').filter(Boolean).slice(1).sort();
 
-  const map = new Map();
+  const map = new Map<string, Item>();
 
   const filterIndex: Record<DataFilter, number> = {
     count: 0,
@@ -69,7 +69,7 @@ export const transformData = (
     };
   });
 
-  valuse.sort((a, b) => a.value - b.value);
+  valuse.sort((a, b) => b.value - a.value);
 
   valuse.forEach(({ path, value }) => {
     path.split('.').reduce((pre, cur) => {
@@ -89,7 +89,7 @@ export const transformData = (
       return path;
     }, '');
 
-    map.get(path).value += value;
+    map.get(path)!.value += value;
   });
 
   map.forEach((item) => {
@@ -112,6 +112,8 @@ export const transformData = (
       updateParentValue(parent);
     }
   });
+
+  map.get('root')!.children.sort((a, b) => b.value - a.value);
 
   return JSON.parse(JSON.stringify(map.get('root') ?? { children: [] }));
 };

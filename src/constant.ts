@@ -21,6 +21,7 @@ export enum ElementSelector {
   chartType = 'chart-type-selector',
   cleanDynamicData = 'clean-dynamic-data',
   orderBy = 'order-by',
+  downloadBtn = 'download-btn',
 }
 
 export const chartType = getDefaultValueFromDom(ElementSelector.chartType);

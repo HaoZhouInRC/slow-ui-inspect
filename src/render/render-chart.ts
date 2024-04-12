@@ -2,6 +2,7 @@ import * as Echarts from 'echarts';
 import { EventType, ev } from '../eventmitter';
 import { getTitle } from '../title';
 import { DataFilter, transformData } from './transform-data';
+import { transformDownloadData } from './transform-download-data';
 
 const seriesType = {
   tree: (data: any) => ({
@@ -98,11 +99,14 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
   let cleanDynamicData = false;
   let dataFilter: DataFilter = 'count';
 
+  let data: any = null;
+
   function _renderChart() {
     chart.clear();
 
     const formatUtil = Echarts.format;
-    const data = transformData(rawData, cleanDynamicData, dataFilter);
+
+    data = transformData(rawData, cleanDynamicData, dataFilter);
 
     const option: Echarts.EChartOption = {
       title: {
@@ -146,6 +150,18 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
   ev.on(EventType.dataFilterChange, (value: DataFilter) => {
     dataFilter = value;
     _renderChart();
+  });
+
+  ev.on(EventType.downloadData, () => {
+    const a = document.createElement('a');
+
+    const blob = new Blob([transformDownloadData(data).join('\n')], {
+      type: 'text/plain',
+    });
+    a.href = URL.createObjectURL(blob);
+    a.download = `slow-ui-data-${dataFilter}.txt`;
+
+    a.click();
   });
 
   _renderChart();

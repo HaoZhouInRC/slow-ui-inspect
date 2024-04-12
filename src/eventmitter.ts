@@ -8,4 +8,5 @@ export enum EventType {
   chartTypeChange = 'chart-type-change',
   cleanDynamicData = 'clean-dynamic-data',
   dataFilterChange = 'data-filter-change',
+  downloadData = 'download-data',
 }
