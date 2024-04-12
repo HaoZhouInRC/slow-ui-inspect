@@ -5,7 +5,7 @@ export interface Item {
   children: Item[];
 }
 
-export type DataFilter = 'count' | 'time' | 'avgTime';
+export type DataFilter = 'count' | 'time-95' | 'time-75' | 'time-50';
 
 /* This is templary function to clean "message data" */
 const normalizePath = (path: string) => {
@@ -29,16 +29,17 @@ const normalizePath = (path: string) => {
 export const transformData = (
   fileContent: string,
   cleanUpData = false,
-  filterBy: DataFilter = 'count',
+  filterBy: DataFilter = 'time-95',
 ) => {
   const data = fileContent.split('\r\n').filter(Boolean).slice(1).sort();
 
   const map = new Map();
 
-  const filterIndex: Record<string, number> = {
+  const filterIndex: Record<DataFilter, number> = {
     count: 0,
-    time: 1,
-    avgTime: 2,
+    'time-95': 1,
+    'time-75': 2,
+    'time-50': 3,
   };
 
   const createItem = (data: Omit<Item, 'children'>) => {
