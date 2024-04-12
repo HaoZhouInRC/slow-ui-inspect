@@ -1,8 +1,9 @@
+import { ElementSelector } from '../constant';
 import { EventType, ev } from '../eventmitter';
 
 export const initCleanDynamicData = () => {
   const chartSelector = document.querySelector(
-    '#clean-dynamic-data',
+    `#${ElementSelector.cleanDynamicData}`,
   ) as HTMLInputElement;
 
   chartSelector?.addEventListener('change', () => {

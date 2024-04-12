@@ -1,8 +1,9 @@
+import { ElementSelector } from '../constant';
 import { EventType, ev } from '../eventmitter';
 
 export const initUpload = () => {
   const element: HTMLInputElement = document.getElementById(
-    'upload-input',
+    ElementSelector.uploadInput,
   ) as HTMLInputElement;
 
   element.addEventListener('change', (event) => {

@@ -1,8 +1,9 @@
+import { ElementSelector } from '../constant';
 import { EventType, ev } from '../eventmitter';
 
 export const initChartSelector = () => {
   const chartSelector = document.querySelector(
-    '#chart-type-selector',
+    `#${ElementSelector.chartType}`,
   ) as HTMLSelectElement;
 
   chartSelector?.addEventListener('change', () => {
