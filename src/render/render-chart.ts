@@ -1,7 +1,7 @@
 import * as Echarts from 'echarts';
 import { EventType, ev } from '../eventmitter';
 import { getTitle } from '../title';
-import { transformData } from './transform-data';
+import { DataFilter, transformData } from './transform-data';
 
 const seriesType = {
   tree: (data: any) => ({
@@ -96,12 +96,13 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
 
   let chartType: keyof typeof seriesType = 'treeMap';
   let cleanDynamicData = false;
+  let dataFilter: DataFilter = 'count';
 
   function _renderChart() {
     chart.clear();
 
     const formatUtil = Echarts.format;
-    const data = transformData(rawData, cleanDynamicData);
+    const data = transformData(rawData, cleanDynamicData, dataFilter);
 
     const option: Echarts.EChartOption = {
       title: {
@@ -132,13 +133,18 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
     chart.setOption(option);
   }
 
-  ev.on(EventType.chartTypeChange, (type: keyof typeof seriesType) => {
-    chartType = type;
+  ev.on(EventType.chartTypeChange, (value: keyof typeof seriesType) => {
+    chartType = value;
     _renderChart();
   });
 
   ev.on(EventType.cleanDynamicData, (value: boolean) => {
     cleanDynamicData = value;
+    _renderChart();
+  });
+
+  ev.on(EventType.dataFilterChange, (value: DataFilter) => {
+    dataFilter = value;
     _renderChart();
   });
 

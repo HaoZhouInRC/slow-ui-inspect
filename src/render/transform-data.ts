@@ -5,6 +5,8 @@ export interface Item {
   children: Item[];
 }
 
+export type DataFilter = 'count' | 'time' | 'avgTime';
+
 /* This is templary function to clean "message data" */
 const normalizePath = (path: string) => {
   const messageFolder = /\.leftRail\.folder\-(.*?)\./.exec(path)?.[1];
@@ -24,10 +26,20 @@ const normalizePath = (path: string) => {
   return path;
 };
 
-export const transformData = (fileContent: string, cleanUpData = false) => {
+export const transformData = (
+  fileContent: string,
+  cleanUpData = false,
+  filterBy: DataFilter = 'count',
+) => {
   const data = fileContent.split('\r\n').filter(Boolean).slice(1).sort();
 
   const map = new Map();
+
+  const filterIndex: Record<string, number> = {
+    count: 0,
+    time: 1,
+    avgTime: 2,
+  };
 
   const createItem = (data: Omit<Item, 'children'>) => {
     return {
@@ -36,12 +48,19 @@ export const transformData = (fileContent: string, cleanUpData = false) => {
     };
   };
 
-  const valuse = data.map((line) => {
-    const pathStr = line.slice(0, line.indexOf(',')).replaceAll('"', '');
-    const valueStr = line.slice(line.indexOf(','));
+  const valuse = data.map((line: string) => {
+    const [pathStr, ...rest] = line
+      .split(',"')
+      .map((str) => str.replaceAll('"', ''));
+
+    const valueStr = rest[filterIndex[filterBy]] || '0';
+
+    if (valueStr === '0') {
+      console.warn('Value not found in line:', line);
+    }
 
     const path = cleanUpData ? normalizePath(pathStr) : pathStr;
-    const value = parseInt(valueStr.replaceAll(',', '').replaceAll('"', ''));
+    const value = parseInt(valueStr.replaceAll(',', ''));
 
     return {
       path,
