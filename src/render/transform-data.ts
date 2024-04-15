@@ -34,7 +34,7 @@ export const transformData = (
   order: Order = 'time-95',
 ) => {
   const { data } = Papa.parse<string[]>(fileContent);
-  const records = data.slice(1);
+  const records = data.slice(1).filter((record) => record.length > 1);
 
   const map = new Map<string, Item>();
 
