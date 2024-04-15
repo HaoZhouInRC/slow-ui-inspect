@@ -1,8 +1,9 @@
 import * as Echarts from 'echarts';
 import { EventType, ev } from '../eventmitter';
 import { getTitle } from '../title';
-import { DataFilter, transformData } from './transform-data';
+import { Order, transformData } from './transform-data';
 import { transformDownloadData } from './transform-download-data';
+import { defaultValue } from '../constant';
 
 const seriesType = {
   tree: (data: any) => ({
@@ -95,9 +96,7 @@ const seriesType = {
 export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
   chart.hideLoading();
 
-  let chartType: keyof typeof seriesType = 'treeMap';
-  let cleanDynamicData = false;
-  let dataFilter: DataFilter = 'count';
+  let { chartType, cleanDynamicData, orderBy } = defaultValue;
 
   let data: any = null;
 
@@ -106,7 +105,7 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
 
     const formatUtil = Echarts.format;
 
-    data = transformData(rawData, cleanDynamicData, dataFilter);
+    data = transformData(rawData, cleanDynamicData, orderBy);
 
     const option: Echarts.EChartOption = {
       title: {
@@ -131,7 +130,7 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
           ].join('');
         },
       },
-      series: [seriesType[chartType](data)],
+      series: [seriesType[chartType as keyof typeof seriesType](data)],
     };
 
     chart.setOption(option);
@@ -147,8 +146,8 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
     _renderChart();
   });
 
-  ev.on(EventType.dataFilterChange, (value: DataFilter) => {
-    dataFilter = value;
+  ev.on(EventType.dataFilterChange, (value: Order) => {
+    orderBy = value;
     _renderChart();
   });
 
@@ -159,7 +158,7 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
       type: 'text/plain',
     });
     a.href = URL.createObjectURL(blob);
-    a.download = `slow-ui-data-${dataFilter}.txt`;
+    a.download = `slow-ui-data-${orderBy}.txt`;
 
     a.click();
   });

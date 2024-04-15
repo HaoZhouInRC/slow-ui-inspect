@@ -1,3 +1,5 @@
+import { Order } from './render/transform-data';
+
 function getDefaultValueFromDom(id: string) {
   const element = document.querySelector(`#${id}`) as HTMLElement;
 
@@ -24,10 +26,15 @@ export enum ElementSelector {
   downloadBtn = 'download-btn',
 }
 
-export const chartType = getDefaultValueFromDom(ElementSelector.chartType);
+const chartType = getDefaultValueFromDom(ElementSelector.chartType);
 
-export const cleanDynamicData = getDefaultValueFromDom(
-  ElementSelector.cleanDynamicData,
-);
+const cleanDynamicData =
+  getDefaultValueFromDom(ElementSelector.cleanDynamicData) === 'true';
 
-export const orderBy = getDefaultValueFromDom(ElementSelector.orderBy);
+const orderBy = getDefaultValueFromDom(ElementSelector.orderBy) as Order;
+
+export const defaultValue = {
+  chartType,
+  cleanDynamicData,
+  orderBy,
+};

@@ -12,11 +12,15 @@
   "devDependencies": {
     "@types/echarts": "^4.9.22",
     "@types/jquery": "^3.5.29",
+    "@types/papaparse": "^5.3.14",
     "prettier": "^3.2.5",
     "vite": "^5.2.8"
   },
   "dependencies": {
+    "@fast-csv/parse": "^5.0.0",
+    "csv-parser": "^3.0.0",
     "echarts": "^5.5.0",
-    "eventemitter3": "^5.0.1"
+    "eventemitter3": "^5.0.1",
+    "papaparse": "^5.4.1"
   }
 }

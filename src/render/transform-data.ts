@@ -1,3 +1,5 @@
+import Papa from 'papaparse';
+
 export interface Item {
   name: string;
   path: string;
@@ -5,7 +7,7 @@ export interface Item {
   children: Item[];
 }
 
-export type DataFilter = 'count' | 'time-95' | 'time-75' | 'time-50';
+export type Order = 'count' | 'time-95' | 'time-75' | 'time-50';
 
 /* This is templary function to clean "message data" */
 const normalizePath = (path: string) => {
@@ -29,13 +31,14 @@ const normalizePath = (path: string) => {
 export const transformData = (
   fileContent: string,
   cleanUpData = false,
-  filterBy: DataFilter = 'time-95',
+  order: Order = 'time-95',
 ) => {
-  const data = fileContent.split('\r\n').filter(Boolean).slice(1).sort();
+  const { data } = Papa.parse<string[]>(fileContent);
+  const records = data.slice(1);
 
   const map = new Map<string, Item>();
 
-  const filterIndex: Record<DataFilter, number> = {
+  const filterIndex: Record<Order, number> = {
     count: 0,
     'time-95': 1,
     'time-75': 2,
@@ -49,19 +52,14 @@ export const transformData = (
     };
   };
 
-  const valuse = data.map((line: string) => {
-    const [pathStr, ...rest] = line
-      .split(',"')
-      .map((str) => str.replaceAll('"', ''));
+  const valuse = records.map((record) => {
+    let [path, ...rest] = record;
 
-    const valueStr = rest[filterIndex[filterBy]] || '0';
-
-    if (valueStr === '0') {
-      console.warn('Value not found in line:', line);
+    if (cleanUpData) {
+      path = normalizePath(path);
     }
 
-    const path = cleanUpData ? normalizePath(pathStr) : pathStr;
-    const value = parseInt(valueStr.replaceAll(',', ''));
+    const value = parseInt(rest[filterIndex[order]].replace(/,/g, ''), 10);
 
     return {
       path,
