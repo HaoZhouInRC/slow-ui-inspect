@@ -105,7 +105,7 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
 
     const formatUtil = Echarts.format;
 
-    data = transformData(rawData, cleanDynamicData, orderBy);
+    data = transformData(rawData, orderBy);
 
     const option: Echarts.EChartOption = {
       title: {

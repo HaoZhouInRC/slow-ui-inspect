@@ -21,20 +21,15 @@ function getDefaultValueFromDom(id: string) {
 export enum ElementSelector {
   uploadInput = 'upload-input',
   chartType = 'chart-type-selector',
-  cleanDynamicData = 'clean-dynamic-data',
   orderBy = 'order-by',
   downloadBtn = 'download-btn',
 }
 
 const chartType = getDefaultValueFromDom(ElementSelector.chartType);
 
-const cleanDynamicData =
-  getDefaultValueFromDom(ElementSelector.cleanDynamicData) === 'true';
-
 const orderBy = getDefaultValueFromDom(ElementSelector.orderBy) as Order;
 
 export const defaultValue = {
   chartType,
-  cleanDynamicData,
   orderBy,
 };

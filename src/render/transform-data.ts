@@ -30,7 +30,6 @@ const normalizePath = (path: string) => {
 
 export const transformData = (
   fileContent: string,
-  cleanUpData = false,
   order: Order = 'time-95',
 ) => {
   const { data } = Papa.parse<string[]>(fileContent);
@@ -54,10 +53,6 @@ export const transformData = (
 
   const valuse = records.map((record) => {
     let [path, ...rest] = record;
-
-    if (cleanUpData) {
-      path = normalizePath(path);
-    }
 
     const value = parseInt(rest[filterIndex[order]].replace(/,/g, ''), 10);
 
@@ -97,7 +92,7 @@ export const transformData = (
       item.value = item.children.reduce((acc, child) => acc + child.value, 0);
 
       updateParentValue(
-        map.get(item.path.slice(0, item.path.lastIndexOf('.'))),
+        map.get(item.path.slice(0, item.path.lastIndexOf('.'))) as Item,
       );
     };
 
@@ -105,9 +100,9 @@ export const transformData = (
       const parentPath = item.path.slice(0, item.path.lastIndexOf('.'));
       const parent = map.get(parentPath);
 
-      parent.children.push(item);
+      parent!.children.push(item);
 
-      updateParentValue(parent);
+      updateParentValue(parent!);
     }
   });
 
