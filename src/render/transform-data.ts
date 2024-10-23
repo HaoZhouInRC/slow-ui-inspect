@@ -9,6 +9,16 @@ export interface Item {
 
 export type Order = 'count' | 'time-95' | 'time-75' | 'time-50';
 
+const normalizeMessageDynamicData = (path: string) => {
+  if (/MESSAGE_LEFT_RAIL_Panel\.leftRail\.folder-/.test(path)) {
+    let folderString = /\.folder-(.*?)\.conversation-collapse/.exec(path)?.[1]!;
+    const folderName = folderString.slice(0, folderString.length / 2);
+
+    return path.replace(`.folder-${folderName}.${folderName}.`, '.folder.');
+  }
+  return path;
+};
+
 export const transformData = (
   fileContent: string,
   filterPrefix: string,
@@ -42,20 +52,20 @@ export const transformData = (
     };
   };
 
-  const valuse = body.map((record) => {
+  const values = body.map((record) => {
     let [path, ...rest] = record;
 
     const value = parseInt(rest[filterIndex[order]].replace(/,/g, ''), 10);
 
     return {
-      path,
+      path: normalizeMessageDynamicData(path),
       value,
     };
   });
 
-  valuse.sort((a, b) => b.value - a.value);
+  values.sort((a, b) => b.value - a.value);
 
-  valuse.forEach(({ path, value }) => {
+  values.forEach(({ path, value }) => {
     path.split('.').reduce((pre, cur) => {
       const path = (pre ? pre + '.' : '') + cur;
 
