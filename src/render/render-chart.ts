@@ -192,9 +192,12 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
   ev.on(EventType.downloadData, () => {
     const a = document.createElement('a');
 
-    const blob = new Blob([transformDownloadData(data).join('\n')], {
-      type: 'text/plain',
-    });
+    const blob = new Blob(
+      [transformDownloadData(data, 0, filterValue.orderBy).join('\n')],
+      {
+        type: 'text/plain',
+      },
+    );
     a.href = URL.createObjectURL(blob);
     a.download = `slow-ui-data-${filterValue.orderBy}.txt`;
 
