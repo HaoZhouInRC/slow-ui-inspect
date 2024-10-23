@@ -91,8 +91,8 @@ const seriesType: Record<SeriesType, any> = {
       },
       levels: getLevelOption(),
       data: data.children,
-      width: '100%',
-      height: '100%',
+      width: '95%',
+      height: '95%',
     };
   },
 };
@@ -199,6 +199,12 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
     a.download = `slow-ui-data-${filterValue.orderBy}.txt`;
 
     a.click();
+  });
+
+  chart.on('click', (params) => {
+    if (params.data) {
+      console.log((params.data as Record<string, any>)['path']);
+    }
   });
 
   _renderChart(filterValue);
