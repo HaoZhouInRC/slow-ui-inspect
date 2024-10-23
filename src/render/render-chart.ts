@@ -77,7 +77,7 @@ const seriesType: Record<SeriesType, any> = {
       name: 'Slow UI Element Count',
       type: 'treemap',
       visibleMin: 300,
-      leafDepth: 5,
+      leafDepth: 8,
       label: {
         show: true,
         formatter: '{b}',
@@ -98,6 +98,7 @@ const seriesType: Record<SeriesType, any> = {
 };
 
 const unitTitle: Record<Order, string> = {
+  'total-95': 'Total P95',
   'time-50': 'P50',
   'time-75': 'P75',
   'time-95': 'P95',
@@ -105,6 +106,7 @@ const unitTitle: Record<Order, string> = {
 };
 
 const unitMap: Record<Order, string> = {
+  'total-95': 'ms',
   'time-50': 'ms',
   'time-75': 'ms',
   'time-95': 'ms',

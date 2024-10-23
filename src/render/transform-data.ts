@@ -7,7 +7,7 @@ export interface Item {
   children: Item[];
 }
 
-export type Order = 'count' | 'time-95' | 'time-75' | 'time-50';
+export type Order = 'count' | 'time-95' | 'time-75' | 'time-50' | 'total-95';
 
 const normalizeMessageDynamicData = (path: string) => {
   if (/MESSAGE_LEFT_RAIL_Panel\.leftRail\.folder-/.test(path)) {
@@ -43,6 +43,7 @@ export const transformData = (
     'time-50': 1,
     'time-75': 2,
     'time-95': 3,
+    'total-95': 4,
   };
 
   const createItem = (data: Omit<Item, 'children'>) => {
@@ -55,7 +56,13 @@ export const transformData = (
   const values = body.map((record) => {
     let [path, ...rest] = record;
 
-    const value = parseInt(rest[filterIndex[order]].replace(/,/g, ''), 10);
+    const toNumber = (v: number) => parseInt(rest[v].replace(/,/g, ''), 10);
+
+    let value = toNumber(filterIndex[order]);
+
+    if (order === 'total-95') {
+      value = toNumber(filterIndex['count']) * toNumber(filterIndex['time-95']);
+    }
 
     return {
       path: normalizeMessageDynamicData(path),
