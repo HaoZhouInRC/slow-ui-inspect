@@ -6,7 +6,7 @@ export enum EventType {
   selectFiles = 'select-files',
   upload = 'upload',
   chartTypeChange = 'chart-type-change',
-  cleanDynamicData = 'clean-dynamic-data',
   dataFilterChange = 'data-filter-change',
   downloadData = 'download-data',
+  filterPrefixChange = ' filter-prefix-change',
 }

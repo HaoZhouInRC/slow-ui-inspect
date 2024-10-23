@@ -23,13 +23,17 @@ export enum ElementSelector {
   chartType = 'chart-type-selector',
   orderBy = 'order-by',
   downloadBtn = 'download-btn',
+  filterInput = 'filter-prefix',
 }
 
 const chartType = getDefaultValueFromDom(ElementSelector.chartType);
 
 const orderBy = getDefaultValueFromDom(ElementSelector.orderBy) as Order;
 
+const filterPrefix = getDefaultValueFromDom(ElementSelector.filterInput) || '';
+
 export const defaultValue = {
   chartType,
   orderBy,
+  filterPrefix,
 };

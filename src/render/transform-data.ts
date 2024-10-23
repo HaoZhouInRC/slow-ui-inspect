@@ -9,31 +9,22 @@ export interface Item {
 
 export type Order = 'count' | 'time-95' | 'time-75' | 'time-50';
 
-/* This is templary function to clean "message data" */
-const normalizePath = (path: string) => {
-  const messageFolder = /\.leftRail\.folder\-(.*?)\./.exec(path)?.[1];
-
-  // root.VersatileResponsiveLayout-MessageRailCompactLayout.MESSAGE_LEFT_RAIL_Panel.leftRail.folder-MTR-113153 Finish the federation contacts-handle contact presence.MTR-113153 Finish the federation contacts-handle contact presence.MTR-113153 Finish the federation contacts-handle contact presence-header
-  if (messageFolder) {
-    if (path.includes(`-${messageFolder}.${messageFolder}.${messageFolder}-`)) {
-      return path.replace(
-        `-${messageFolder}.${messageFolder}.${messageFolder}-`,
-        '.',
-      );
-    } else {
-      return path.replace(`-${messageFolder}.${messageFolder}.`, '.');
-    }
-  }
-
-  return path;
-};
-
 export const transformData = (
   fileContent: string,
+  filterPrefix: string,
   order: Order = 'time-95',
 ) => {
   const { data } = Papa.parse<string[]>(fileContent);
-  const records = data.slice(1).filter((record) => record.length > 1);
+
+  let body = data.slice(1).filter((record) => record.length > 1);
+
+  if (filterPrefix) {
+    if (!filterPrefix.startsWith('root.')) {
+      filterPrefix = `root.${filterPrefix}`;
+    }
+
+    body = body.filter(([element]) => element.startsWith(filterPrefix));
+  }
 
   const map = new Map<string, Item>();
 
@@ -51,7 +42,7 @@ export const transformData = (
     };
   };
 
-  const valuse = records.map((record) => {
+  const valuse = body.map((record) => {
     let [path, ...rest] = record;
 
     const value = parseInt(rest[filterIndex[order]].replace(/,/g, ''), 10);

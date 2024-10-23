@@ -96,7 +96,7 @@ const seriesType = {
 export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
   chart.hideLoading();
 
-  let { chartType, cleanDynamicData, orderBy } = defaultValue;
+  let { chartType, filterPrefix, orderBy } = defaultValue;
 
   let data: any = null;
 
@@ -105,7 +105,7 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
 
     const formatUtil = Echarts.format;
 
-    data = transformData(rawData, orderBy);
+    data = transformData(rawData, filterPrefix, orderBy);
 
     const option: Echarts.EChartOption = {
       title: {
@@ -141,8 +141,8 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
     _renderChart();
   });
 
-  ev.on(EventType.cleanDynamicData, (value: boolean) => {
-    cleanDynamicData = value;
+  ev.on(EventType.filterPrefixChange, (value: string) => {
+    filterPrefix = value;
     _renderChart();
   });
 
