@@ -18,6 +18,8 @@ function getDefaultValueFromDom(id: string) {
   }
 }
 
+export type SeriesType = 'tree' | 'treeMap';
+
 export enum ElementSelector {
   uploadInput = 'upload-input',
   chartType = 'chart-type-selector',
@@ -26,7 +28,9 @@ export enum ElementSelector {
   filterInput = 'filter-prefix',
 }
 
-const chartType = getDefaultValueFromDom(ElementSelector.chartType);
+const chartType = getDefaultValueFromDom(
+  ElementSelector.chartType,
+) as SeriesType;
 
 const orderBy = getDefaultValueFromDom(ElementSelector.orderBy) as Order;
 

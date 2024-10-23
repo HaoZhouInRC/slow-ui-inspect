@@ -3,9 +3,9 @@ import { EventType, ev } from '../eventmitter';
 import { getTitle } from '../title';
 import { Order, transformData } from './transform-data';
 import { transformDownloadData } from './transform-download-data';
-import { defaultValue } from '../constant';
+import { defaultValue, SeriesType } from '../constant';
 
-const seriesType = {
+const seriesType: Record<SeriesType, any> = {
   tree: (data: any) => ({
     type: 'tree',
     data: [data],
@@ -76,6 +76,7 @@ const seriesType = {
       name: 'Slow UI Element Count',
       type: 'treemap',
       visibleMin: 300,
+      leafDepth: 5,
       label: {
         show: true,
         formatter: '{b}',
@@ -93,19 +94,41 @@ const seriesType = {
   },
 };
 
+const unitTitle: Record<Order, string> = {
+  'time-50': 'Total Time',
+  'time-75': 'Total Time',
+  'time-95': 'Total Time',
+  count: 'Total Count',
+};
+
+const unitMap: Record<Order, string> = {
+  'time-50': 'ms',
+  'time-75': 'ms',
+  'time-95': 'ms',
+  count: '',
+};
+
 export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
   chart.hideLoading();
 
-  let { chartType, filterPrefix, orderBy } = defaultValue;
+  const filterValue = { ...defaultValue };
 
   let data: any = null;
 
-  function _renderChart() {
+  function _renderChart(filterValue: {
+    filterPrefix: string;
+    chartType: string;
+    orderBy: Order;
+  }) {
     chart.clear();
 
     const formatUtil = Echarts.format;
 
-    data = transformData(rawData, filterPrefix, orderBy);
+    data = transformData(
+      rawData,
+      filterValue.filterPrefix,
+      filterValue.orderBy,
+    );
 
     const option: Echarts.EChartOption = {
       title: {
@@ -119,36 +142,42 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
           const value = info.value;
           const treePathInfo = info.treePathInfo;
           const treePath = [];
+
           for (let i = 1; i < treePathInfo.length; i++) {
             treePath.push(treePathInfo[i].name);
           }
+
+          const valueItem = () => {
+            return `${unitTitle[filterValue.orderBy]}: ${formatUtil.addCommas(value)} ${unitMap[filterValue.orderBy]}`;
+          };
+
           return [
             '<div class="tooltip-title" style="max-width: 240px; white-space: break-spaces; word-wrap: break-word;">' +
               formatUtil.encodeHTML(treePath.join('.')) +
               '</div>',
-            'Avg time: ' + formatUtil.addCommas(value) + ' ms',
+            valueItem(),
           ].join('');
         },
       },
-      series: [seriesType[chartType as keyof typeof seriesType](data)],
+      series: [seriesType[filterValue.chartType as SeriesType](data)],
     };
 
     chart.setOption(option);
   }
 
   ev.on(EventType.chartTypeChange, (value: keyof typeof seriesType) => {
-    chartType = value;
-    _renderChart();
+    filterValue.chartType = value;
+    _renderChart(filterValue);
   });
 
   ev.on(EventType.filterPrefixChange, (value: string) => {
-    filterPrefix = value;
-    _renderChart();
+    filterValue.filterPrefix = value;
+    _renderChart(filterValue);
   });
 
   ev.on(EventType.dataFilterChange, (value: Order) => {
-    orderBy = value;
-    _renderChart();
+    filterValue.orderBy = value;
+    _renderChart(filterValue);
   });
 
   ev.on(EventType.downloadData, () => {
@@ -158,10 +187,10 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
       type: 'text/plain',
     });
     a.href = URL.createObjectURL(blob);
-    a.download = `slow-ui-data-${orderBy}.txt`;
+    a.download = `slow-ui-data-${filterValue.orderBy}.txt`;
 
     a.click();
   });
 
-  _renderChart();
+  _renderChart(filterValue);
 };
