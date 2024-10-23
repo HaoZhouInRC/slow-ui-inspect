@@ -3,7 +3,7 @@ import type echarts from 'echarts';
 import { isHoldMetaKey, updateFilterValue } from '../chart-tools';
 import { EventType, ev } from '../eventmitter';
 import { getTitle } from '../title';
-import { Order, transformData } from './transform-data';
+import { filterIndex, Order, transformData } from './transform-data';
 import { transformDownloadData } from './transform-download-data';
 import { defaultValue, SeriesType } from '../constant';
 
@@ -120,6 +120,7 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
   const filterValue = { ...defaultValue };
 
   let data: any = null;
+  let dataMap: Map<string, number[]> = new Map();
 
   function _renderChart(filterValue: {
     filterPrefix: string;
@@ -130,11 +131,17 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
 
     const formatUtil = Echarts.format;
 
-    data = transformData(
+    let body: [string, number][];
+
+    [data, body] = transformData(
       rawData,
       filterValue.filterPrefix,
       filterValue.orderBy,
     );
+
+    body.forEach(([key, ...rest]) => {
+      dataMap.set(key, rest);
+    });
 
     const option: echarts.EChartsOption = {
       title: {
@@ -147,15 +154,17 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
         formatter: function (info: any) {
           const value = info.value;
           const treePathInfo = info.treePathInfo;
-          const treePath = [];
+          const treePath: string[] = [];
 
           for (let i = 1; i < treePathInfo.length; i++) {
             treePath.push(treePathInfo[i].name);
           }
 
           const valueItem = () => {
+            const rawData = dataMap.get(`root.${treePath.join('.')}`);
+
             if (filterValue.orderBy === 'count') {
-              return `${unitTitle[filterValue.orderBy]}: ${formatUtil.addCommas(value)} ${unitMap[filterValue.orderBy]}`;
+              return `${unitTitle[filterValue.orderBy]}: ${formatUtil.addCommas(value)} ${unitMap[filterValue.orderBy]} ${rawData ? 'p95 ' + rawData[filterIndex['time-95']] + 'ms' : ''}`;
             }
 
             if (info.data.children.length === 0) {
