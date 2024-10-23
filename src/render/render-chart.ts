@@ -1,4 +1,5 @@
 import * as Echarts from 'echarts';
+import type echarts from 'echarts';
 import { EventType, ev } from '../eventmitter';
 import { getTitle } from '../title';
 import { Order, transformData } from './transform-data';
@@ -6,7 +7,7 @@ import { transformDownloadData } from './transform-download-data';
 import { defaultValue, SeriesType } from '../constant';
 
 const seriesType: Record<SeriesType, any> = {
-  tree: (data: any) => ({
+  tree: (data: any): echarts.TreeSeriesOption => ({
     type: 'tree',
     data: [data],
     top: '1%',
@@ -35,7 +36,7 @@ const seriesType: Record<SeriesType, any> = {
     animationDurationUpdate: 750,
     initialTreeDepth: 10,
   }),
-  treeMap: (data: any) => {
+  treeMap: (data: any): echarts.TreemapSeriesOption => {
     function getLevelOption() {
       return [
         {
@@ -90,14 +91,16 @@ const seriesType: Record<SeriesType, any> = {
       },
       levels: getLevelOption(),
       data: data.children,
+      width: '100%',
+      height: '100%',
     };
   },
 };
 
 const unitTitle: Record<Order, string> = {
-  'time-50': 'Total Time',
-  'time-75': 'Total Time',
-  'time-95': 'Total Time',
+  'time-50': 'P50',
+  'time-75': 'P75',
+  'time-95': 'P95',
   count: 'Total Count',
 };
 
@@ -130,7 +133,7 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
       filterValue.orderBy,
     );
 
-    const option: Echarts.EChartOption = {
+    const option: echarts.EChartsOption = {
       title: {
         text: `Slow UI From "${getTitle()}"`,
         left: 'center',
@@ -148,7 +151,13 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
           }
 
           const valueItem = () => {
-            return `${unitTitle[filterValue.orderBy]}: ${formatUtil.addCommas(value)} ${unitMap[filterValue.orderBy]}`;
+            if (filterValue.orderBy === 'count') {
+              return `${unitTitle[filterValue.orderBy]}: ${formatUtil.addCommas(value)} ${unitMap[filterValue.orderBy]}`;
+            }
+
+            if (info.data.children.length === 0) {
+              return `${unitTitle[filterValue.orderBy]}: ${formatUtil.addCommas(value)} ${unitMap[filterValue.orderBy]}`;
+            }
           };
 
           return [

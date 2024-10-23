@@ -30,9 +30,9 @@ export const transformData = (
 
   const filterIndex: Record<Order, number> = {
     count: 0,
-    'time-95': 1,
+    'time-50': 1,
     'time-75': 2,
-    'time-50': 3,
+    'time-95': 3,
   };
 
   const createItem = (data: Omit<Item, 'children'>) => {
