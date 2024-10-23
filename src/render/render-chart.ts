@@ -1,5 +1,6 @@
 import * as Echarts from 'echarts';
 import type echarts from 'echarts';
+import { isHoldMetaKey, updateFilterValue } from '../chart-tools';
 import { EventType, ev } from '../eventmitter';
 import { getTitle } from '../title';
 import { Order, transformData } from './transform-data';
@@ -207,8 +208,14 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
   });
 
   chart.on('click', (params) => {
-    if (params.data) {
-      console.log((params.data as Record<string, any>)['path']);
+    const path = (params.data as Record<string, any>)['path'];
+    if (path) {
+      if (isHoldMetaKey()) {
+        chart.dispatchAction({ type: 'hideTip' });
+
+        updateFilterValue(path);
+        ev.emit(EventType.filterPrefixChange, path);
+      }
     }
   });
 
