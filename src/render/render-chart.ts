@@ -115,15 +115,17 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
             show: true,
             formatter: (params) => {
               const percentage =
-                Math.floor(
-                  (parseInt(params.value as string, 10) / root.value) * 100,
-                ) + '%';
+                Math.round(
+                  (parseInt(params.value as string, 10) / root.value) * 10000,
+                ) /
+                  100 +
+                '%';
 
               if ((params.data as TreeItem).children.length === 0) {
                 return [
                   '{name|' + params.name + '}',
                   '{hr|}',
-                  `{name|p95: ${(params.data as TreeItem).rawData[filterIndex['time-95'] + 1]}ms}`,
+                  `{name|p98: ${(params.data as TreeItem).rawData[filterIndex['time-98'] + 1]}ms}`,
                   '{hr|}',
                   `{name|Count: ${params.value!} ${percentage}}`,
                 ].join('\n');
@@ -170,10 +172,19 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
         trigger: 'item',
         formatter: function (info: any) {
           const data = info.data as TreeItem;
+          const percentage =
+            Math.round(
+              (parseInt(info.value as string, 10) / root.value) * 10000,
+            ) /
+              100 +
+            '%';
 
           return [
             '<div class="tooltip-title" style="max-width: 240px; white-space: break-spaces; word-wrap: break-word;">' +
               formatUtil.encodeHTML(data.path) +
+              '</div>',
+            '<div class="tooltip-title" style="max-width: 240px; white-space: break-spaces; word-wrap: break-word;">' +
+              `Count: ${info.value} ${percentage}` +
               '</div>',
           ].join('');
         },
