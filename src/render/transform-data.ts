@@ -1,10 +1,10 @@
 import Papa from 'papaparse';
 
-export interface Item {
+export interface TreeItem {
   name: string;
   path: string;
   value: number;
-  children: Item[];
+  children: TreeItem[];
 }
 
 export type Order = 'count' | 'time-95' | 'time-75' | 'time-50' | 'total-95';
@@ -44,11 +44,12 @@ export const transformData = (
     body = body.filter(([element]) => element.startsWith(filterPrefix));
   }
 
-  const map = new Map<string, Item>();
+  const map = new Map<string, TreeItem>();
 
-  const createItem = (data: Omit<Item, 'children'>) => {
+  const createItem = (data: Omit<TreeItem, 'name' | 'children'>) => {
     return {
       ...data,
+      name: data.path.split('.').pop()!,
       children: [],
     };
   };
@@ -70,51 +71,38 @@ export const transformData = (
     };
   });
 
-  values.sort((a, b) => b.value - a.value);
-
   values.forEach(({ path, value }) => {
-    path.split('.').reduce((pre, cur) => {
-      const path = (pre ? pre + '.' : '') + cur;
+    if (!map.has(path)) {
+      map.set(path, createItem({ path, value }));
+    } else {
+      map.get(path)!.value += value;
+    }
 
-      if (!map.has(path)) {
-        map.set(
-          path,
-          createItem({
-            name: cur,
-            path: path,
-            value: 0,
-          }),
-        );
+    let lastIndex = path.lastIndexOf('.');
+    let current = map.get(path)!;
+
+    while (lastIndex >= 0) {
+      const parentPath = path.slice(0, lastIndex);
+
+      if (!map.has(parentPath)) {
+        map.set(parentPath, createItem({ path: parentPath, value: 0 }));
       }
 
-      return path;
-    }, '');
+      const parent = map.get(parentPath)!;
 
-    map.get(path)!.value += value;
-  });
+      parent.value = parent.value + value;
 
-  map.forEach((item) => {
-    const updateParentValue = (item: Item) => {
-      if (!item) return;
+      if (!parent.children.find((item) => item.path === current.path)) {
+        parent.children.push(current);
+      }
 
-      item.value = item.children.reduce((acc, child) => acc + child.value, 0);
+      // for next loop
+      path = parentPath;
+      current = parent;
 
-      updateParentValue(
-        map.get(item.path.slice(0, item.path.lastIndexOf('.'))) as Item,
-      );
-    };
-
-    if (item.path.includes('.')) {
-      const parentPath = item.path.slice(0, item.path.lastIndexOf('.'));
-      const parent = map.get(parentPath);
-
-      parent!.children.push(item);
-
-      updateParentValue(parent!);
+      lastIndex = path.lastIndexOf('.');
     }
   });
-
-  map.get('root')!.children.sort((a, b) => b.value - a.value);
 
   return [
     JSON.parse(JSON.stringify(map.get('root') ?? { children: [] })),

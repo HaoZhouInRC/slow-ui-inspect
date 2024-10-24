@@ -1,7 +1,7 @@
-import { Item, Order } from './transform-data';
+import { TreeItem, Order } from './transform-data';
 
 export const transformDownloadData = (
-  data: Item,
+  data: TreeItem,
   depth: number = 0,
   orderBy: Order,
 ): string[] => {
@@ -21,7 +21,7 @@ export const transformDownloadData = (
 
   return [
     line,
-    ...data.children.flatMap((child: Item) =>
+    ...data.children.flatMap((child: TreeItem) =>
       transformDownloadData(child, depth + 1, orderBy),
     ),
   ];
