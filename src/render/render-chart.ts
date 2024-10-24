@@ -3,7 +3,7 @@ import type echarts from 'echarts';
 import { isHoldMetaKey, updateFilterValue } from '../chart-tools';
 import { EventType, ev } from '../eventmitter';
 import { getTitle } from '../title';
-import { filterIndex, Order, transformData } from './transform-data';
+import { filterIndex, Order, transformData, TreeItem } from './transform-data';
 import { transformDownloadData } from './transform-download-data';
 import { defaultValue, SeriesType } from '../constant';
 
@@ -132,8 +132,9 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
     const formatUtil = Echarts.format;
 
     let body: [string, number][];
+    let root: TreeItem;
 
-    [data, body] = transformData(
+    [data, body, root] = transformData(
       rawData,
       filterValue.filterPrefix,
       filterValue.orderBy,
@@ -164,7 +165,7 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
             const rawData = dataMap.get(`root.${treePath.join('.')}`);
 
             if (filterValue.orderBy === 'count') {
-              return `${unitTitle[filterValue.orderBy]}: ${formatUtil.addCommas(value)} ${unitMap[filterValue.orderBy]} ${rawData ? 'p95 ' + rawData[filterIndex['time-95']] + 'ms' : ''}`;
+              return `${unitTitle[filterValue.orderBy]}: ${formatUtil.addCommas(value)} ${Math.floor((value / root!.value) * 100) + '%'} </br>${rawData ? 'p95 ' + rawData[filterIndex['time-95']] + 'ms' : ''}`;
             }
 
             if (info.data.children.length === 0) {

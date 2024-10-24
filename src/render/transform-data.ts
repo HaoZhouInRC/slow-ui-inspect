@@ -107,5 +107,6 @@ export const transformData = (
   return [
     JSON.parse(JSON.stringify(map.get('root') ?? { children: [] })),
     body,
+    map.get('root') ?? { value: 1 },
   ];
 };
