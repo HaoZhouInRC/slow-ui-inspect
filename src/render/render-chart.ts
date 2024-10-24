@@ -7,113 +7,6 @@ import { filterIndex, Order, transformData, TreeItem } from './transform-data';
 import { transformDownloadData } from './transform-download-data';
 import { defaultValue, SeriesType } from '../constant';
 
-const seriesType: Record<SeriesType, any> = {
-  tree: (data: any): echarts.TreeSeriesOption => ({
-    type: 'tree',
-    data: [data],
-    top: '1%',
-    left: '7%',
-    bottom: '1%',
-    right: '20%',
-    symbolSize: 7,
-    label: {
-      position: 'left',
-      verticalAlign: 'middle',
-      align: 'right',
-      fontSize: 9,
-    },
-    leaves: {
-      label: {
-        position: 'right',
-        verticalAlign: 'middle',
-        align: 'left',
-      },
-    },
-    emphasis: {
-      focus: 'descendant',
-    },
-    expandAndCollapse: true,
-    animationDuration: 550,
-    animationDurationUpdate: 750,
-    initialTreeDepth: 10,
-  }),
-  treeMap: (data: any): echarts.TreemapSeriesOption => {
-    function getLevelOption() {
-      return [
-        {
-          // root level
-          itemStyle: {
-            borderColor: '#333',
-            borderWidth: 0,
-            gapWidth: 1,
-          },
-          upperLabel: {
-            show: false,
-          },
-        },
-        ...['#555', '#777', '#999', '#bbb', '#ddd', '#fff'].map((color) => ({
-          itemStyle: {
-            borderColor: color,
-            borderWidth: 3,
-            gapWidth: 1,
-          },
-          emphasis: {
-            itemStyle: {
-              borderColor: '#ddd',
-            },
-          },
-        })),
-        {
-          colorSaturation: [0.35, 0.5],
-          itemStyle: {
-            borderWidth: 5,
-            gapWidth: 1,
-            borderColorSaturation: 0.6,
-          },
-        },
-      ];
-    }
-
-    return {
-      name: 'Slow UI Element Count',
-      type: 'treemap',
-      visibleMin: 300,
-      leafDepth: 8,
-      label: {
-        show: true,
-        formatter: '{b}',
-      },
-      upperLabel: {
-        show: true,
-        height: 30,
-      },
-      itemStyle: {
-        borderColor: '#fff',
-      },
-      levels: getLevelOption(),
-      data: data.children,
-      width: '95%',
-      height: '95%',
-    };
-  },
-};
-
-const unitTitle: Record<Order, string> = {
-  'total-95': 'Total P95',
-  'time-50': 'P50',
-  'time-75': 'P75',
-  'time-95': 'P95',
-  count: 'Total Count',
-};
-
-const unitMap: Record<Order, string> = {
-  'total-95': 'ms',
-  'time-50': 'ms',
-  'time-75': 'ms',
-  'time-95': 'ms',
-  count: '',
-};
-
 export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
   chart.hideLoading();
 
@@ -144,6 +37,129 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
       dataMap.set(key, rest);
     });
 
+    const seriesType: Record<SeriesType, any> = {
+      tree: (data: any): echarts.TreeSeriesOption => ({
+        type: 'tree',
+        data: [data],
+        top: '1%',
+        left: '7%',
+        bottom: '1%',
+        right: '20%',
+        symbolSize: 7,
+        label: {
+          position: 'left',
+          verticalAlign: 'middle',
+          align: 'right',
+          fontSize: 9,
+        },
+        leaves: {
+          label: {
+            position: 'right',
+            verticalAlign: 'middle',
+            align: 'left',
+          },
+        },
+        emphasis: {
+          focus: 'descendant',
+        },
+        expandAndCollapse: true,
+        animationDuration: 550,
+        animationDurationUpdate: 750,
+        initialTreeDepth: 10,
+      }),
+      treeMap: (data: any): echarts.TreemapSeriesOption => {
+        function getLevelOption() {
+          return [
+            {
+              // root level
+              itemStyle: {
+                borderColor: '#333',
+                borderWidth: 0,
+                gapWidth: 1,
+              },
+              upperLabel: {
+                show: false,
+              },
+            },
+            ...['#555', '#777', '#999', '#bbb', '#ddd', '#fff'].map(
+              (color) => ({
+                itemStyle: {
+                  borderColor: color,
+                  borderWidth: 3,
+                  gapWidth: 1,
+                },
+                emphasis: {
+                  itemStyle: {
+                    borderColor: '#ddd',
+                  },
+                },
+              }),
+            ),
+            {
+              colorSaturation: [0.35, 0.5],
+              itemStyle: {
+                borderWidth: 5,
+                gapWidth: 1,
+                borderColorSaturation: 0.6,
+              },
+            },
+          ];
+        }
+
+        return {
+          name: 'Slow UI Element Count',
+          type: 'treemap',
+          visibleMin: 300,
+          leafDepth: 8,
+          label: {
+            show: true,
+            formatter: (params) => {
+              const percentage =
+                Math.floor(
+                  (parseInt(params.value as string, 10) / root.value) * 100,
+                ) + '%';
+
+              if ((params.data as TreeItem).children.length === 0) {
+                return [
+                  '{name|' + params.name + '}',
+                  '{hr|}',
+                  `{name|p95: ${(params.data as TreeItem).rawData[filterIndex['time-95'] + 1]}ms}`,
+                  '{hr|}',
+                  `{name|Count: ${params.value!} ${percentage}}`,
+                ].join('\n');
+              }
+
+              return `${params.name} ${params.value} ${percentage}`;
+            },
+            rich: {
+              name: {
+                fontSize: 12,
+                color: '#fff',
+              },
+              hr: {
+                width: '100%',
+                borderColor: 'rgba(255,255,255,0.2)',
+                borderWidth: 0.5,
+                height: 0,
+                lineHeight: 10,
+              },
+            },
+          },
+          upperLabel: {
+            show: true,
+            height: 30,
+          },
+          itemStyle: {
+            borderColor: '#fff',
+          },
+          levels: getLevelOption(),
+          data: data.children,
+          width: '95%',
+          height: '95%',
+        };
+      },
+    };
+
     const option: echarts.EChartsOption = {
       title: {
         text: `Slow UI From "${getTitle()}"`,
@@ -153,31 +169,12 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
       tooltip: {
         trigger: 'item',
         formatter: function (info: any) {
-          const value = info.value;
-          const treePathInfo = info.treePathInfo;
-          const treePath: string[] = [];
-
-          for (let i = 1; i < treePathInfo.length; i++) {
-            treePath.push(treePathInfo[i].name);
-          }
-
-          const valueItem = () => {
-            const rawData = dataMap.get(`root.${treePath.join('.')}`);
-
-            if (filterValue.orderBy === 'count') {
-              return `${unitTitle[filterValue.orderBy]}: ${formatUtil.addCommas(value)} ${Math.floor((value / root!.value) * 100) + '%'} </br>${rawData ? 'p95 ' + rawData[filterIndex['time-95']] + 'ms' : ''}`;
-            }
-
-            if (info.data.children.length === 0) {
-              return `${unitTitle[filterValue.orderBy]}: ${formatUtil.addCommas(value)} ${unitMap[filterValue.orderBy]}`;
-            }
-          };
+          const data = info.data as TreeItem;
 
           return [
             '<div class="tooltip-title" style="max-width: 240px; white-space: break-spaces; word-wrap: break-word;">' +
-              formatUtil.encodeHTML(treePath.join('.')) +
+              formatUtil.encodeHTML(data.path) +
               '</div>',
-            valueItem(),
           ].join('');
         },
       },
@@ -187,7 +184,7 @@ export const renderChart = (chart: Echarts.EChartsType, rawData: any) => {
     chart.setOption(option);
   }
 
-  ev.on(EventType.chartTypeChange, (value: keyof typeof seriesType) => {
+  ev.on(EventType.chartTypeChange, (value: SeriesType) => {
     filterValue.chartType = value;
     _renderChart(filterValue);
   });

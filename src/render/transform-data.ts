@@ -5,6 +5,7 @@ export interface TreeItem {
   path: string;
   value: number;
   children: TreeItem[];
+  rawData: string[];
 }
 
 export type Order = 'count' | 'time-95' | 'time-75' | 'time-50' | 'total-95';
@@ -68,12 +69,13 @@ export const transformData = (
     return {
       path: normalizeMessageDynamicData(path),
       value,
+      rawData: record,
     };
   });
 
-  values.forEach(({ path, value }) => {
+  values.forEach(({ path, value, rawData }) => {
     if (!map.has(path)) {
-      map.set(path, createItem({ path, value }));
+      map.set(path, createItem({ path, value, rawData }));
     } else {
       map.get(path)!.value += value;
     }
@@ -85,7 +87,10 @@ export const transformData = (
       const parentPath = path.slice(0, lastIndex);
 
       if (!map.has(parentPath)) {
-        map.set(parentPath, createItem({ path: parentPath, value: 0 }));
+        map.set(
+          parentPath,
+          createItem({ path: parentPath, value: 0, rawData: [] }),
+        );
       }
 
       const parent = map.get(parentPath)!;
